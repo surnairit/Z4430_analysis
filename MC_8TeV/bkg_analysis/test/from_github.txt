@@ -1,0 +1,3 @@
+curl "https://raw.githubusercontent.com/surnairit/Z4430_bkg_analysis/master/BkgAnalysis.h" -o "BkgAnalysis.h"
+curl "https://raw.githubusercontent.com/surnairit/Z4430_bkg_analysis/master/BkgAnalysis.C" -o "BkgAnalysis.C"
+curl "https://raw.githubusercontent.com/surnairit/Z4430_bkg_analysis/master/Run.prooflite_ZInclAnalysis.C" -o "Run.prooflite_ZInclAnalysis.C"

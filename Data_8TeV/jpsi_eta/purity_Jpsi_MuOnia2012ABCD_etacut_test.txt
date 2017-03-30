@@ -1,0 +1,2 @@
+cut_val	nsig	nsig_err	nbkg	nbkg_err	S/(S+B) 	sig_err
+0.5     91412.6     1060.49     84075.3     1122.58     0.520905     0.00758496

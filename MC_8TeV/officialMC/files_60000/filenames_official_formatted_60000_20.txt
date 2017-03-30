@@ -1,0 +1,10 @@
+file:/lustre/cms/store/mc/Summer12DR53X/BdToJpsiKPi_BFilter_MSEL5_TuneZ2star_8TeV-Pythia6-evtgen/AODSIM/PU_RD2_START53_V19F-v1/60000/068F9F2A-94DE-E511-A776-0025905A6066.root
+file:/lustre/cms/store/mc/Summer12DR53X/BdToJpsiKPi_BFilter_MSEL5_TuneZ2star_8TeV-Pythia6-evtgen/AODSIM/PU_RD2_START53_V19F-v1/60000/06B72985-D3DD-E511-834D-0025905B85D8.root
+file:/lustre/cms/store/mc/Summer12DR53X/BdToJpsiKPi_BFilter_MSEL5_TuneZ2star_8TeV-Pythia6-evtgen/AODSIM/PU_RD2_START53_V19F-v1/60000/083AE4F0-CDDD-E511-9DD7-02163E017664.root
+file:/lustre/cms/store/mc/Summer12DR53X/BdToJpsiKPi_BFilter_MSEL5_TuneZ2star_8TeV-Pythia6-evtgen/AODSIM/PU_RD2_START53_V19F-v1/60000/0A1D35D7-D4DD-E511-818B-0025905A60CA.root
+file:/lustre/cms/store/mc/Summer12DR53X/BdToJpsiKPi_BFilter_MSEL5_TuneZ2star_8TeV-Pythia6-evtgen/AODSIM/PU_RD2_START53_V19F-v1/60000/10865965-D6DD-E511-B156-02163E017655.root
+file:/lustre/cms/store/mc/Summer12DR53X/BdToJpsiKPi_BFilter_MSEL5_TuneZ2star_8TeV-Pythia6-evtgen/AODSIM/PU_RD2_START53_V19F-v1/60000/1243200C-D2DD-E511-B0CE-0025905A612A.root
+file:/lustre/cms/store/mc/Summer12DR53X/BdToJpsiKPi_BFilter_MSEL5_TuneZ2star_8TeV-Pythia6-evtgen/AODSIM/PU_RD2_START53_V19F-v1/60000/12502DD2-C4DD-E511-995E-0CC47A4D7640.root
+file:/lustre/cms/store/mc/Summer12DR53X/BdToJpsiKPi_BFilter_MSEL5_TuneZ2star_8TeV-Pythia6-evtgen/AODSIM/PU_RD2_START53_V19F-v1/60000/12CF58A8-E9DD-E511-9149-0025905B8564.root
+file:/lustre/cms/store/mc/Summer12DR53X/BdToJpsiKPi_BFilter_MSEL5_TuneZ2star_8TeV-Pythia6-evtgen/AODSIM/PU_RD2_START53_V19F-v1/60000/1417B260-DEDD-E511-9260-0CC47A78A3F4.root
+file:/lustre/cms/store/mc/Summer12DR53X/BdToJpsiKPi_BFilter_MSEL5_TuneZ2star_8TeV-Pythia6-evtgen/AODSIM/PU_RD2_START53_V19F-v1/60000/1474965E-D6DD-E511-91D6-0CC47A4D7664.root

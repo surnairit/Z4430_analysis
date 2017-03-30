@@ -1,0 +1,2 @@
+nohup cmsRun runMuMuPiKPAT_MC_29Jan_60000_130.py   >& log_60000_130.txt &
+nohup cmsRun runMuMuPiKPAT_MC_29Jan_60000_140.py   >& log_60000_140.txt &

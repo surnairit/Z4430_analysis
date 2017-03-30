@@ -1,0 +1,12 @@
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_30.py
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_40.py
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_50.py
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_60.py
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_70.py
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_80.py
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_90.py
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_100.py
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_110.py
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_120.py
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_130.py
+cp runMuMuPiKPAT_MC_29Jan.py runMuMuPiKPAT_MC_29Jan_60000_140.py

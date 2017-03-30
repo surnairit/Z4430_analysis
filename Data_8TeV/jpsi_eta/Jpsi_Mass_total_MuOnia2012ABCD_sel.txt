@@ -1,0 +1,2 @@
+eta_bin         mean        sigma1          n1      sigma2          n2      sigma_eff
+-0.5to-0.3     3.09439     0.0196935     313591     0.0337901     306308    0.026659

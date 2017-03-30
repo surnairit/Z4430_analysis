@@ -1,0 +1,1176 @@
+[MuonAnalysis.MuonAssociators.patMuonsWithTrigger_cff] Di-muon triggers are already enabled by default
+************** MC dependence removal ************
+removing MC dependencies for photons
+removing MC dependencies for electrons
+removing MC dependencies for muons
+removing MC dependencies for taus
+removing MC dependencies for jets
+FilterOutScraping_debug: Run 207214 Event 4900867 Lumi Block 31019 Bunch Crossing -1 Fraction 0.812834 NTracks 561 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 12
+Pileup Information: bunchXing, nvtx: -5 9
+Pileup Information: bunchXing, nvtx: -4 12
+Pileup Information: bunchXing, nvtx: -3 17
+Pileup Information: bunchXing, nvtx: -2 16
+Pileup Information: bunchXing, nvtx: -1 15
+Pileup Information: bunchXing, nvtx: 0 18
+Pileup Information: bunchXing, nvtx: 1 10
+############### GenParticles Analysis ###############
+
+starting event with 434 tracks, and 8 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900868 Lumi Block 31019 Bunch Crossing -1 Fraction 0.745052 NTracks 859 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 29
+Pileup Information: bunchXing, nvtx: -5 30
+Pileup Information: bunchXing, nvtx: -4 28
+Pileup Information: bunchXing, nvtx: -3 35
+Pileup Information: bunchXing, nvtx: -2 35
+Pileup Information: bunchXing, nvtx: -1 25
+Pileup Information: bunchXing, nvtx: 0 37
+Pileup Information: bunchXing, nvtx: 1 35
+############### GenParticles Analysis ###############
+
+starting event with 678 tracks, and 5 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900869 Lumi Block 31019 Bunch Crossing -1 Fraction 0.878947 NTracks 380 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900870 Lumi Block 31019 Bunch Crossing -1 Fraction 0.841772 NTracks 474 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 17
+Pileup Information: bunchXing, nvtx: -5 13
+Pileup Information: bunchXing, nvtx: -4 26
+Pileup Information: bunchXing, nvtx: -3 20
+Pileup Information: bunchXing, nvtx: -2 27
+Pileup Information: bunchXing, nvtx: -1 20
+Pileup Information: bunchXing, nvtx: 0 22
+Pileup Information: bunchXing, nvtx: 1 28
+############### GenParticles Analysis ###############
+
+starting event with 372 tracks, and 3 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900871 Lumi Block 31019 Bunch Crossing -1 Fraction 0.814721 NTracks 394 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900873 Lumi Block 31019 Bunch Crossing -1 Fraction 0.825197 NTracks 635 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900874 Lumi Block 31019 Bunch Crossing -1 Fraction 0.830769 NTracks 195 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900877 Lumi Block 31019 Bunch Crossing -1 Fraction 0.804841 NTracks 661 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900878 Lumi Block 31019 Bunch Crossing -1 Fraction 0.817434 NTracks 608 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 17
+Pileup Information: bunchXing, nvtx: -5 22
+Pileup Information: bunchXing, nvtx: -4 22
+Pileup Information: bunchXing, nvtx: -3 22
+Pileup Information: bunchXing, nvtx: -2 20
+Pileup Information: bunchXing, nvtx: -1 13
+Pileup Information: bunchXing, nvtx: 0 24
+Pileup Information: bunchXing, nvtx: 1 19
+############### GenParticles Analysis ###############
+
+starting event with 477 tracks, and 5 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900879 Lumi Block 31019 Bunch Crossing -1 Fraction 0.791519 NTracks 566 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 34
+Pileup Information: bunchXing, nvtx: -5 31
+Pileup Information: bunchXing, nvtx: -4 41
+Pileup Information: bunchXing, nvtx: -3 31
+Pileup Information: bunchXing, nvtx: -2 30
+Pileup Information: bunchXing, nvtx: -1 32
+Pileup Information: bunchXing, nvtx: 0 27
+Pileup Information: bunchXing, nvtx: 1 28
+############### GenParticles Analysis ###############
+
+starting event with 424 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900880 Lumi Block 31019 Bunch Crossing -1 Fraction 0.771264 NTracks 870 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900881 Lumi Block 31019 Bunch Crossing -1 Fraction 0.801324 NTracks 453 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900882 Lumi Block 31019 Bunch Crossing -1 Fraction 0.712386 NTracks 1203 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 23
+Pileup Information: bunchXing, nvtx: -5 32
+Pileup Information: bunchXing, nvtx: -4 32
+Pileup Information: bunchXing, nvtx: -3 29
+Pileup Information: bunchXing, nvtx: -2 28
+Pileup Information: bunchXing, nvtx: -1 28
+Pileup Information: bunchXing, nvtx: 0 34
+Pileup Information: bunchXing, nvtx: 1 35
+############### GenParticles Analysis ###############
+
+starting event with 968 tracks, and 9 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900883 Lumi Block 31019 Bunch Crossing -1 Fraction 0.827526 NTracks 574 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900886 Lumi Block 31019 Bunch Crossing -1 Fraction 0.832677 NTracks 508 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900887 Lumi Block 31019 Bunch Crossing -1 Fraction 0.77381 NTracks 588 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900889 Lumi Block 31019 Bunch Crossing -1 Fraction 0.808044 NTracks 547 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900890 Lumi Block 31019 Bunch Crossing -1 Fraction 0.839535 NTracks 430 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900891 Lumi Block 31019 Bunch Crossing -1 Fraction 0.853372 NTracks 341 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900892 Lumi Block 31019 Bunch Crossing -1 Fraction 0.829374 NTracks 463 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900893 Lumi Block 31019 Bunch Crossing -1 Fraction 0.80789 NTracks 583 Accepted 1
+continue due to no track ref
+FilterOutScraping_debug: Run 207214 Event 4900894 Lumi Block 31019 Bunch Crossing -1 Fraction 0.832558 NTracks 645 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900895 Lumi Block 31019 Bunch Crossing -1 Fraction 0.799745 NTracks 784 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900896 Lumi Block 31019 Bunch Crossing -1 Fraction 0.888672 NTracks 512 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900897 Lumi Block 31019 Bunch Crossing -1 Fraction 0.81405 NTracks 484 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 33
+Pileup Information: bunchXing, nvtx: -5 49
+Pileup Information: bunchXing, nvtx: -4 40
+Pileup Information: bunchXing, nvtx: -3 32
+Pileup Information: bunchXing, nvtx: -2 45
+Pileup Information: bunchXing, nvtx: -1 32
+Pileup Information: bunchXing, nvtx: 0 22
+Pileup Information: bunchXing, nvtx: 1 32
+############### GenParticles Analysis ###############
+
+starting event with 363 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900898 Lumi Block 31019 Bunch Crossing -1 Fraction 0.783626 NTracks 684 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900899 Lumi Block 31019 Bunch Crossing -1 Fraction 0.768307 NTracks 833 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900901 Lumi Block 31019 Bunch Crossing -1 Fraction 0.836257 NTracks 513 Accepted 1
+continue due to no track ref
+FilterOutScraping_debug: Run 207214 Event 4900903 Lumi Block 31019 Bunch Crossing -1 Fraction 0.80427 NTracks 562 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 15
+Pileup Information: bunchXing, nvtx: -5 23
+Pileup Information: bunchXing, nvtx: -4 19
+Pileup Information: bunchXing, nvtx: -3 16
+Pileup Information: bunchXing, nvtx: -2 24
+Pileup Information: bunchXing, nvtx: -1 29
+Pileup Information: bunchXing, nvtx: 0 20
+Pileup Information: bunchXing, nvtx: 1 17
+############### GenParticles Analysis ###############
+
+starting event with 416 tracks, and 4 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900906 Lumi Block 31019 Bunch Crossing -1 Fraction 0.816726 NTracks 562 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900909 Lumi Block 31019 Bunch Crossing -1 Fraction 0.79712 NTracks 764 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 31
+Pileup Information: bunchXing, nvtx: -5 27
+Pileup Information: bunchXing, nvtx: -4 25
+Pileup Information: bunchXing, nvtx: -3 31
+Pileup Information: bunchXing, nvtx: -2 30
+Pileup Information: bunchXing, nvtx: -1 29
+Pileup Information: bunchXing, nvtx: 0 26
+Pileup Information: bunchXing, nvtx: 1 34
+############### GenParticles Analysis ###############
+
+starting event with 593 tracks, and 4 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900910 Lumi Block 31019 Bunch Crossing -1 Fraction 0.814259 NTracks 533 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900915 Lumi Block 31019 Bunch Crossing -1 Fraction 0.830861 NTracks 337 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900916 Lumi Block 31019 Bunch Crossing -1 Fraction 0.812992 NTracks 508 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900917 Lumi Block 31019 Bunch Crossing -1 Fraction 0.801136 NTracks 704 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 19
+Pileup Information: bunchXing, nvtx: -5 18
+Pileup Information: bunchXing, nvtx: -4 28
+Pileup Information: bunchXing, nvtx: -3 21
+Pileup Information: bunchXing, nvtx: -2 18
+Pileup Information: bunchXing, nvtx: -1 31
+Pileup Information: bunchXing, nvtx: 0 21
+Pileup Information: bunchXing, nvtx: 1 28
+############### GenParticles Analysis ###############
+
+starting event with 559 tracks, and 7 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900918 Lumi Block 31019 Bunch Crossing -1 Fraction 0.79067 NTracks 836 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900919 Lumi Block 31019 Bunch Crossing -1 Fraction 0.846512 NTracks 430 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900920 Lumi Block 31019 Bunch Crossing -1 Fraction 0.809639 NTracks 415 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900921 Lumi Block 31019 Bunch Crossing -1 Fraction 0.855491 NTracks 173 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900923 Lumi Block 31019 Bunch Crossing -1 Fraction 0.875886 NTracks 282 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 8
+Pileup Information: bunchXing, nvtx: -5 16
+Pileup Information: bunchXing, nvtx: -4 16
+Pileup Information: bunchXing, nvtx: -3 21
+Pileup Information: bunchXing, nvtx: -2 11
+Pileup Information: bunchXing, nvtx: -1 15
+Pileup Information: bunchXing, nvtx: 0 10
+Pileup Information: bunchXing, nvtx: 1 10
+############### GenParticles Analysis ###############
+
+starting event with 223 tracks, and 7 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900924 Lumi Block 31019 Bunch Crossing -1 Fraction 0.838843 NTracks 242 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900925 Lumi Block 31019 Bunch Crossing -1 Fraction 0.865625 NTracks 320 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900928 Lumi Block 31019 Bunch Crossing -1 Fraction 0.746283 NTracks 1076 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 30
+Pileup Information: bunchXing, nvtx: -5 20
+Pileup Information: bunchXing, nvtx: -4 25
+Pileup Information: bunchXing, nvtx: -3 27
+Pileup Information: bunchXing, nvtx: -2 28
+Pileup Information: bunchXing, nvtx: -1 27
+Pileup Information: bunchXing, nvtx: 0 23
+Pileup Information: bunchXing, nvtx: 1 29
+############### GenParticles Analysis ###############
+
+starting event with 852 tracks, and 4 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900929 Lumi Block 31019 Bunch Crossing -1 Fraction 0.78327 NTracks 526 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900931 Lumi Block 31019 Bunch Crossing -1 Fraction 0.786408 NTracks 721 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900933 Lumi Block 31019 Bunch Crossing -1 Fraction 0.822901 NTracks 655 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900934 Lumi Block 31019 Bunch Crossing -1 Fraction 0.86398 NTracks 397 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 20
+Pileup Information: bunchXing, nvtx: -5 19
+Pileup Information: bunchXing, nvtx: -4 27
+Pileup Information: bunchXing, nvtx: -3 21
+Pileup Information: bunchXing, nvtx: -2 17
+Pileup Information: bunchXing, nvtx: -1 9
+Pileup Information: bunchXing, nvtx: 0 22
+Pileup Information: bunchXing, nvtx: 1 33
+############### GenParticles Analysis ###############
+
+starting event with 301 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900935 Lumi Block 31019 Bunch Crossing -1 Fraction 0.899666 NTracks 299 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900937 Lumi Block 31019 Bunch Crossing -1 Fraction 0.798365 NTracks 734 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900938 Lumi Block 31019 Bunch Crossing -1 Fraction 0.829154 NTracks 638 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900939 Lumi Block 31019 Bunch Crossing -1 Fraction 0.84252 NTracks 381 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900942 Lumi Block 31019 Bunch Crossing -1 Fraction 0.847701 NTracks 348 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900944 Lumi Block 31019 Bunch Crossing -1 Fraction 0.788489 NTracks 695 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900945 Lumi Block 31019 Bunch Crossing -1 Fraction 0.820513 NTracks 624 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900946 Lumi Block 31019 Bunch Crossing -1 Fraction 0.840764 NTracks 471 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900948 Lumi Block 31019 Bunch Crossing -1 Fraction 0.793872 NTracks 718 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900950 Lumi Block 31019 Bunch Crossing -1 Fraction 0.854369 NTracks 309 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900951 Lumi Block 31019 Bunch Crossing -1 Fraction 0.838164 NTracks 414 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 20
+Pileup Information: bunchXing, nvtx: -5 21
+Pileup Information: bunchXing, nvtx: -4 10
+Pileup Information: bunchXing, nvtx: -3 16
+Pileup Information: bunchXing, nvtx: -2 16
+Pileup Information: bunchXing, nvtx: -1 8
+Pileup Information: bunchXing, nvtx: 0 13
+Pileup Information: bunchXing, nvtx: 1 19
+############### GenParticles Analysis ###############
+
+starting event with 336 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900954 Lumi Block 31019 Bunch Crossing -1 Fraction 0.776637 NTracks 779 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900955 Lumi Block 31019 Bunch Crossing -1 Fraction 0.873156 NTracks 339 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900957 Lumi Block 31019 Bunch Crossing -1 Fraction 0.631719 NTracks 1879 Accepted 1
+continue due to no track ref
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 34
+Pileup Information: bunchXing, nvtx: -5 31
+Pileup Information: bunchXing, nvtx: -4 35
+Pileup Information: bunchXing, nvtx: -3 34
+Pileup Information: bunchXing, nvtx: -2 36
+Pileup Information: bunchXing, nvtx: -1 24
+Pileup Information: bunchXing, nvtx: 0 47
+Pileup Information: bunchXing, nvtx: 1 26
+############### GenParticles Analysis ###############
+
+starting event with 1534 tracks, and 12 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900959 Lumi Block 31019 Bunch Crossing -1 Fraction 0.77193 NTracks 798 Accepted 1
+continue from no track ref
+FilterOutScraping_debug: Run 207214 Event 4900961 Lumi Block 31019 Bunch Crossing -1 Fraction 0.800493 NTracks 406 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900962 Lumi Block 31019 Bunch Crossing -1 Fraction 0.836815 NTracks 766 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900964 Lumi Block 31019 Bunch Crossing -1 Fraction 0.786145 NTracks 664 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900967 Lumi Block 31019 Bunch Crossing -1 Fraction 0.824847 NTracks 491 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900968 Lumi Block 31019 Bunch Crossing -1 Fraction 0.772004 NTracks 943 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 22
+Pileup Information: bunchXing, nvtx: -5 24
+Pileup Information: bunchXing, nvtx: -4 23
+Pileup Information: bunchXing, nvtx: -3 18
+Pileup Information: bunchXing, nvtx: -2 18
+Pileup Information: bunchXing, nvtx: -1 16
+Pileup Information: bunchXing, nvtx: 0 29
+Pileup Information: bunchXing, nvtx: 1 22
+############### GenParticles Analysis ###############
+
+starting event with 744 tracks, and 9 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900970 Lumi Block 31019 Bunch Crossing -1 Fraction 0.808824 NTracks 272 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900971 Lumi Block 31019 Bunch Crossing -1 Fraction 0.766909 NTracks 961 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900972 Lumi Block 31019 Bunch Crossing -1 Fraction 0.711816 NTracks 1388 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900973 Lumi Block 31019 Bunch Crossing -1 Fraction 0.77792 NTracks 779 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 30
+Pileup Information: bunchXing, nvtx: -5 30
+Pileup Information: bunchXing, nvtx: -4 37
+Pileup Information: bunchXing, nvtx: -3 33
+Pileup Information: bunchXing, nvtx: -2 31
+Pileup Information: bunchXing, nvtx: -1 32
+Pileup Information: bunchXing, nvtx: 0 28
+Pileup Information: bunchXing, nvtx: 1 38
+############### GenParticles Analysis ###############
+
+starting event with 612 tracks, and 3 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900975 Lumi Block 31019 Bunch Crossing -1 Fraction 0.858209 NTracks 402 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 12
+Pileup Information: bunchXing, nvtx: -5 24
+Pileup Information: bunchXing, nvtx: -4 17
+Pileup Information: bunchXing, nvtx: -3 13
+Pileup Information: bunchXing, nvtx: -2 15
+Pileup Information: bunchXing, nvtx: -1 23
+Pileup Information: bunchXing, nvtx: 0 19
+Pileup Information: bunchXing, nvtx: 1 22
+############### GenParticles Analysis ###############
+
+starting event with 321 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900980 Lumi Block 31019 Bunch Crossing -1 Fraction 0.860947 NTracks 338 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 24
+Pileup Information: bunchXing, nvtx: -5 22
+Pileup Information: bunchXing, nvtx: -4 28
+Pileup Information: bunchXing, nvtx: -3 25
+Pileup Information: bunchXing, nvtx: -2 19
+Pileup Information: bunchXing, nvtx: -1 23
+Pileup Information: bunchXing, nvtx: 0 17
+Pileup Information: bunchXing, nvtx: 1 22
+############### GenParticles Analysis ###############
+
+Matched trigger: HLT_Dimuon8_Jpsi_v7
+starting event with 271 tracks, and 2 muons
+============================  evt: 4900980 Accept event with 2 mu and TRIGGER ==============================================
+evt:4900980 trackerLayersWithMeasurement=15
+mu found 26 fHits=1
+evt:4900980 MuMu with diMuonType = 1
+Matched MuMu
+pvbeamspot.isValid() = 1
+evt:4900980 is Invalid Muon ?  0
+nB0 = 1
+nB0 = 2
+nB0 = 3
+nB0 = 4
+nB0 = 5
+nB0 = 6
+nB0 = 7
+nB0 = 8
+nB0 = 9
+nB0 = 10
+evt:4900980 trackerLayersWithMeasurement=15
+mu found 22 fHits=1
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900982 Lumi Block 31019 Bunch Crossing -1 Fraction 0.804945 NTracks 728 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 25
+Pileup Information: bunchXing, nvtx: -5 20
+Pileup Information: bunchXing, nvtx: -4 15
+Pileup Information: bunchXing, nvtx: -3 24
+Pileup Information: bunchXing, nvtx: -2 16
+Pileup Information: bunchXing, nvtx: -1 14
+Pileup Information: bunchXing, nvtx: 0 22
+Pileup Information: bunchXing, nvtx: 1 24
+############### GenParticles Analysis ###############
+
+starting event with 581 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900983 Lumi Block 31019 Bunch Crossing -1 Fraction 0.828452 NTracks 239 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900984 Lumi Block 31019 Bunch Crossing -1 Fraction 0.747409 NTracks 772 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900985 Lumi Block 31019 Bunch Crossing -1 Fraction 0.821705 NTracks 516 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900986 Lumi Block 31019 Bunch Crossing -1 Fraction 0.784242 NTracks 825 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900987 Lumi Block 31019 Bunch Crossing -1 Fraction 0.787356 NTracks 696 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900989 Lumi Block 31019 Bunch Crossing -1 Fraction 0.825243 NTracks 309 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900991 Lumi Block 31019 Bunch Crossing -1 Fraction 0.82243 NTracks 428 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900992 Lumi Block 31019 Bunch Crossing -1 Fraction 0.780374 NTracks 642 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900993 Lumi Block 31019 Bunch Crossing -1 Fraction 0.834416 NTracks 308 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 15
+Pileup Information: bunchXing, nvtx: -5 16
+Pileup Information: bunchXing, nvtx: -4 17
+Pileup Information: bunchXing, nvtx: -3 16
+Pileup Information: bunchXing, nvtx: -2 24
+Pileup Information: bunchXing, nvtx: -1 22
+Pileup Information: bunchXing, nvtx: 0 16
+Pileup Information: bunchXing, nvtx: 1 13
+############### GenParticles Analysis ###############
+
+starting event with 234 tracks, and 3 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4900995 Lumi Block 31019 Bunch Crossing -1 Fraction 0.76763 NTracks 865 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900996 Lumi Block 31019 Bunch Crossing -1 Fraction 0.847095 NTracks 327 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4900998 Lumi Block 31019 Bunch Crossing -1 Fraction 0.792521 NTracks 829 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 24
+Pileup Information: bunchXing, nvtx: -5 20
+Pileup Information: bunchXing, nvtx: -4 24
+Pileup Information: bunchXing, nvtx: -3 22
+Pileup Information: bunchXing, nvtx: -2 20
+Pileup Information: bunchXing, nvtx: -1 23
+Pileup Information: bunchXing, nvtx: 0 22
+Pileup Information: bunchXing, nvtx: 1 16
+############### GenParticles Analysis ###############
+
+starting event with 663 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901001 Lumi Block 31019 Bunch Crossing -1 Fraction 0.819957 NTracks 461 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 21
+Pileup Information: bunchXing, nvtx: -5 17
+Pileup Information: bunchXing, nvtx: -4 21
+Pileup Information: bunchXing, nvtx: -3 21
+Pileup Information: bunchXing, nvtx: -2 24
+Pileup Information: bunchXing, nvtx: -1 20
+Pileup Information: bunchXing, nvtx: 0 21
+Pileup Information: bunchXing, nvtx: 1 16
+############### GenParticles Analysis ###############
+
+starting event with 349 tracks, and 3 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901004 Lumi Block 31019 Bunch Crossing -1 Fraction 0.719645 NTracks 1013 Accepted 1
+continue due to no track ref
+FilterOutScraping_debug: Run 207214 Event 4901005 Lumi Block 31019 Bunch Crossing -1 Fraction 0.759124 NTracks 822 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901007 Lumi Block 31019 Bunch Crossing -1 Fraction 0.840461 NTracks 608 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901008 Lumi Block 31019 Bunch Crossing -1 Fraction 0.761211 NTracks 892 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901010 Lumi Block 31019 Bunch Crossing -1 Fraction 0.896755 NTracks 339 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901011 Lumi Block 31019 Bunch Crossing -1 Fraction 0.810606 NTracks 528 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901012 Lumi Block 31020 Bunch Crossing -1 Fraction 0.786427 NTracks 501 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 25
+Pileup Information: bunchXing, nvtx: -5 26
+Pileup Information: bunchXing, nvtx: -4 20
+Pileup Information: bunchXing, nvtx: -3 29
+Pileup Information: bunchXing, nvtx: -2 22
+Pileup Information: bunchXing, nvtx: -1 12
+Pileup Information: bunchXing, nvtx: 0 20
+Pileup Information: bunchXing, nvtx: 1 10
+############### GenParticles Analysis ###############
+
+starting event with 391 tracks, and 5 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901013 Lumi Block 31020 Bunch Crossing -1 Fraction 0.861111 NTracks 216 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901014 Lumi Block 31020 Bunch Crossing -1 Fraction 0.834101 NTracks 434 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901016 Lumi Block 31020 Bunch Crossing -1 Fraction 0.821705 NTracks 258 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901017 Lumi Block 31020 Bunch Crossing -1 Fraction 0.864407 NTracks 236 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901018 Lumi Block 31020 Bunch Crossing -1 Fraction 0.828221 NTracks 489 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901019 Lumi Block 31020 Bunch Crossing -1 Fraction 0.821078 NTracks 408 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901020 Lumi Block 31020 Bunch Crossing -1 Fraction 0.833713 NTracks 439 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901023 Lumi Block 31020 Bunch Crossing -1 Fraction 0.813022 NTracks 599 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901024 Lumi Block 31020 Bunch Crossing -1 Fraction 0.770349 NTracks 688 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901027 Lumi Block 31020 Bunch Crossing -1 Fraction 0.764793 NTracks 676 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 29
+Pileup Information: bunchXing, nvtx: -5 19
+Pileup Information: bunchXing, nvtx: -4 18
+Pileup Information: bunchXing, nvtx: -3 28
+Pileup Information: bunchXing, nvtx: -2 36
+Pileup Information: bunchXing, nvtx: -1 27
+Pileup Information: bunchXing, nvtx: 0 32
+Pileup Information: bunchXing, nvtx: 1 23
+############### GenParticles Analysis ###############
+
+starting event with 521 tracks, and 4 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901028 Lumi Block 31020 Bunch Crossing -1 Fraction 0.78382 NTracks 754 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 28
+Pileup Information: bunchXing, nvtx: -5 23
+Pileup Information: bunchXing, nvtx: -4 27
+Pileup Information: bunchXing, nvtx: -3 35
+Pileup Information: bunchXing, nvtx: -2 20
+Pileup Information: bunchXing, nvtx: -1 21
+Pileup Information: bunchXing, nvtx: 0 28
+Pileup Information: bunchXing, nvtx: 1 28
+############### GenParticles Analysis ###############
+
+starting event with 584 tracks, and 8 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901031 Lumi Block 31020 Bunch Crossing -1 Fraction 0.781955 NTracks 133 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901032 Lumi Block 31020 Bunch Crossing -1 Fraction 0.754 NTracks 1000 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901033 Lumi Block 31020 Bunch Crossing -1 Fraction 0.810769 NTracks 650 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 21
+Pileup Information: bunchXing, nvtx: -5 22
+Pileup Information: bunchXing, nvtx: -4 25
+Pileup Information: bunchXing, nvtx: -3 16
+Pileup Information: bunchXing, nvtx: -2 16
+Pileup Information: bunchXing, nvtx: -1 17
+Pileup Information: bunchXing, nvtx: 0 25
+Pileup Information: bunchXing, nvtx: 1 12
+############### GenParticles Analysis ###############
+
+starting event with 510 tracks, and 3 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901035 Lumi Block 31020 Bunch Crossing -1 Fraction 0.760135 NTracks 888 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 33
+Pileup Information: bunchXing, nvtx: -5 35
+Pileup Information: bunchXing, nvtx: -4 29
+Pileup Information: bunchXing, nvtx: -3 22
+Pileup Information: bunchXing, nvtx: -2 31
+Pileup Information: bunchXing, nvtx: -1 33
+Pileup Information: bunchXing, nvtx: 0 32
+Pileup Information: bunchXing, nvtx: 1 34
+############### GenParticles Analysis ###############
+
+starting event with 694 tracks, and 5 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901037 Lumi Block 31020 Bunch Crossing -1 Fraction 0.844125 NTracks 417 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901039 Lumi Block 31020 Bunch Crossing -1 Fraction 0.755976 NTracks 1004 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 29
+Pileup Information: bunchXing, nvtx: -5 29
+Pileup Information: bunchXing, nvtx: -4 27
+Pileup Information: bunchXing, nvtx: -3 38
+Pileup Information: bunchXing, nvtx: -2 33
+Pileup Information: bunchXing, nvtx: -1 30
+Pileup Information: bunchXing, nvtx: 0 32
+Pileup Information: bunchXing, nvtx: 1 26
+############### GenParticles Analysis ###############
+
+starting event with 797 tracks, and 11 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901041 Lumi Block 31020 Bunch Crossing -1 Fraction 0.831606 NTracks 386 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901042 Lumi Block 31020 Bunch Crossing -1 Fraction 0.857143 NTracks 168 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901043 Lumi Block 31020 Bunch Crossing -1 Fraction 0.846435 NTracks 547 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 28
+Pileup Information: bunchXing, nvtx: -5 27
+Pileup Information: bunchXing, nvtx: -4 16
+Pileup Information: bunchXing, nvtx: -3 18
+Pileup Information: bunchXing, nvtx: -2 25
+Pileup Information: bunchXing, nvtx: -1 19
+Pileup Information: bunchXing, nvtx: 0 18
+Pileup Information: bunchXing, nvtx: 1 16
+############### GenParticles Analysis ###############
+
+starting event with 450 tracks, and 6 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901044 Lumi Block 31020 Bunch Crossing -1 Fraction 0.803922 NTracks 408 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 14
+Pileup Information: bunchXing, nvtx: -5 20
+Pileup Information: bunchXing, nvtx: -4 21
+Pileup Information: bunchXing, nvtx: -3 19
+Pileup Information: bunchXing, nvtx: -2 14
+Pileup Information: bunchXing, nvtx: -1 22
+Pileup Information: bunchXing, nvtx: 0 21
+Pileup Information: bunchXing, nvtx: 1 20
+############### GenParticles Analysis ###############
+
+starting event with 304 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901046 Lumi Block 31020 Bunch Crossing -1 Fraction 0.854701 NTracks 468 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 16
+Pileup Information: bunchXing, nvtx: -5 13
+Pileup Information: bunchXing, nvtx: -4 8
+Pileup Information: bunchXing, nvtx: -3 7
+Pileup Information: bunchXing, nvtx: -2 7
+Pileup Information: bunchXing, nvtx: -1 11
+Pileup Information: bunchXing, nvtx: 0 15
+Pileup Information: bunchXing, nvtx: 1 16
+############### GenParticles Analysis ###############
+
+starting event with 374 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901047 Lumi Block 31020 Bunch Crossing -1 Fraction 0.78184 NTracks 848 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901050 Lumi Block 31020 Bunch Crossing -1 Fraction 0.845118 NTracks 297 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901055 Lumi Block 31020 Bunch Crossing -1 Fraction 0.847418 NTracks 426 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901057 Lumi Block 31020 Bunch Crossing -1 Fraction 0.776078 NTracks 719 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 24
+Pileup Information: bunchXing, nvtx: -5 26
+Pileup Information: bunchXing, nvtx: -4 33
+Pileup Information: bunchXing, nvtx: -3 42
+Pileup Information: bunchXing, nvtx: -2 39
+Pileup Information: bunchXing, nvtx: -1 38
+Pileup Information: bunchXing, nvtx: 0 25
+Pileup Information: bunchXing, nvtx: 1 24
+############### GenParticles Analysis ###############
+
+starting event with 567 tracks, and 4 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901058 Lumi Block 31020 Bunch Crossing -1 Fraction 0.771005 NTracks 607 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901061 Lumi Block 31020 Bunch Crossing -1 Fraction 0.812221 NTracks 671 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901062 Lumi Block 31020 Bunch Crossing -1 Fraction 0.872727 NTracks 275 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901064 Lumi Block 31020 Bunch Crossing -1 Fraction 0.82438 NTracks 484 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901065 Lumi Block 31020 Bunch Crossing -1 Fraction 0.818548 NTracks 496 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901066 Lumi Block 31020 Bunch Crossing -1 Fraction 0.781176 NTracks 850 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 29
+Pileup Information: bunchXing, nvtx: -5 18
+Pileup Information: bunchXing, nvtx: -4 29
+Pileup Information: bunchXing, nvtx: -3 26
+Pileup Information: bunchXing, nvtx: -2 20
+Pileup Information: bunchXing, nvtx: -1 18
+Pileup Information: bunchXing, nvtx: 0 27
+Pileup Information: bunchXing, nvtx: 1 29
+############### GenParticles Analysis ###############
+
+starting event with 666 tracks, and 5 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901067 Lumi Block 31020 Bunch Crossing -1 Fraction 0.805263 NTracks 570 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901070 Lumi Block 31020 Bunch Crossing -1 Fraction 0.831435 NTracks 439 Accepted 1
+continue due to no track ref
+FilterOutScraping_debug: Run 207214 Event 4901073 Lumi Block 31020 Bunch Crossing -1 Fraction 0.776935 NTracks 659 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 24
+Pileup Information: bunchXing, nvtx: -5 25
+Pileup Information: bunchXing, nvtx: -4 26
+Pileup Information: bunchXing, nvtx: -3 20
+Pileup Information: bunchXing, nvtx: -2 28
+Pileup Information: bunchXing, nvtx: -1 31
+Pileup Information: bunchXing, nvtx: 0 26
+Pileup Information: bunchXing, nvtx: 1 22
+############### GenParticles Analysis ###############
+
+starting event with 509 tracks, and 3 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901074 Lumi Block 31020 Bunch Crossing -1 Fraction 0.85061 NTracks 328 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901076 Lumi Block 31020 Bunch Crossing -1 Fraction 0.835938 NTracks 256 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901077 Lumi Block 31020 Bunch Crossing -1 Fraction 0.875598 NTracks 418 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 19
+Pileup Information: bunchXing, nvtx: -5 10
+Pileup Information: bunchXing, nvtx: -4 11
+Pileup Information: bunchXing, nvtx: -3 12
+Pileup Information: bunchXing, nvtx: -2 13
+Pileup Information: bunchXing, nvtx: -1 17
+Pileup Information: bunchXing, nvtx: 0 12
+Pileup Information: bunchXing, nvtx: 1 14
+############### GenParticles Analysis ###############
+
+starting event with 322 tracks, and 3 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901080 Lumi Block 31020 Bunch Crossing -1 Fraction 0.836957 NTracks 276 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 25
+Pileup Information: bunchXing, nvtx: -5 26
+Pileup Information: bunchXing, nvtx: -4 18
+Pileup Information: bunchXing, nvtx: -3 21
+Pileup Information: bunchXing, nvtx: -2 34
+Pileup Information: bunchXing, nvtx: -1 25
+Pileup Information: bunchXing, nvtx: 0 12
+Pileup Information: bunchXing, nvtx: 1 20
+############### GenParticles Analysis ###############
+
+starting event with 227 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901082 Lumi Block 31020 Bunch Crossing -1 Fraction 0.840506 NTracks 395 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901085 Lumi Block 31020 Bunch Crossing -1 Fraction 0.8 NTracks 610 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901087 Lumi Block 31020 Bunch Crossing -1 Fraction 0.900302 NTracks 331 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901090 Lumi Block 31020 Bunch Crossing -1 Fraction 0.740741 NTracks 1215 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901096 Lumi Block 31020 Bunch Crossing -1 Fraction 0.811518 NTracks 382 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901097 Lumi Block 31020 Bunch Crossing -1 Fraction 0.805687 NTracks 422 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901099 Lumi Block 31020 Bunch Crossing -1 Fraction 0.839416 NTracks 274 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901100 Lumi Block 31020 Bunch Crossing -1 Fraction 0.856164 NTracks 292 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901102 Lumi Block 31020 Bunch Crossing -1 Fraction 0.818781 NTracks 607 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901103 Lumi Block 31020 Bunch Crossing -1 Fraction 0.798578 NTracks 422 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901104 Lumi Block 31020 Bunch Crossing -1 Fraction 0.805 NTracks 600 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901105 Lumi Block 31020 Bunch Crossing -1 Fraction 0.818681 NTracks 364 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901109 Lumi Block 31020 Bunch Crossing -1 Fraction 0.802448 NTracks 572 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 30
+Pileup Information: bunchXing, nvtx: -5 29
+Pileup Information: bunchXing, nvtx: -4 27
+Pileup Information: bunchXing, nvtx: -3 36
+Pileup Information: bunchXing, nvtx: -2 26
+Pileup Information: bunchXing, nvtx: -1 31
+Pileup Information: bunchXing, nvtx: 0 24
+Pileup Information: bunchXing, nvtx: 1 23
+############### GenParticles Analysis ###############
+
+starting event with 449 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901112 Lumi Block 31020 Bunch Crossing -1 Fraction 0.823197 NTracks 707 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901113 Lumi Block 31020 Bunch Crossing -1 Fraction 0.794025 NTracks 636 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901117 Lumi Block 31020 Bunch Crossing -1 Fraction 0.846491 NTracks 228 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901119 Lumi Block 31020 Bunch Crossing -1 Fraction 0.784641 NTracks 599 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901122 Lumi Block 31020 Bunch Crossing -1 Fraction 0.767821 NTracks 491 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 31
+Pileup Information: bunchXing, nvtx: -5 32
+Pileup Information: bunchXing, nvtx: -4 29
+Pileup Information: bunchXing, nvtx: -3 34
+Pileup Information: bunchXing, nvtx: -2 20
+Pileup Information: bunchXing, nvtx: -1 16
+Pileup Information: bunchXing, nvtx: 0 19
+Pileup Information: bunchXing, nvtx: 1 25
+############### GenParticles Analysis ###############
+
+starting event with 363 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901123 Lumi Block 31020 Bunch Crossing -1 Fraction 0.781197 NTracks 585 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 31
+Pileup Information: bunchXing, nvtx: -5 24
+Pileup Information: bunchXing, nvtx: -4 27
+Pileup Information: bunchXing, nvtx: -3 23
+Pileup Information: bunchXing, nvtx: -2 26
+Pileup Information: bunchXing, nvtx: -1 22
+Pileup Information: bunchXing, nvtx: 0 34
+Pileup Information: bunchXing, nvtx: 1 26
+############### GenParticles Analysis ###############
+
+starting event with 437 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901125 Lumi Block 31020 Bunch Crossing -1 Fraction 0.804527 NTracks 486 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901126 Lumi Block 31020 Bunch Crossing -1 Fraction 0.867692 NTracks 325 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901127 Lumi Block 31020 Bunch Crossing -1 Fraction 0.811808 NTracks 542 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 13
+Pileup Information: bunchXing, nvtx: -5 13
+Pileup Information: bunchXing, nvtx: -4 16
+Pileup Information: bunchXing, nvtx: -3 15
+Pileup Information: bunchXing, nvtx: -2 24
+Pileup Information: bunchXing, nvtx: -1 20
+Pileup Information: bunchXing, nvtx: 0 17
+Pileup Information: bunchXing, nvtx: 1 12
+############### GenParticles Analysis ###############
+
+starting event with 421 tracks, and 4 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901128 Lumi Block 31020 Bunch Crossing -1 Fraction 0.783712 NTracks 749 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901129 Lumi Block 31020 Bunch Crossing -1 Fraction 0.791209 NTracks 637 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 14
+Pileup Information: bunchXing, nvtx: -5 20
+Pileup Information: bunchXing, nvtx: -4 33
+Pileup Information: bunchXing, nvtx: -3 24
+Pileup Information: bunchXing, nvtx: -2 18
+Pileup Information: bunchXing, nvtx: -1 20
+Pileup Information: bunchXing, nvtx: 0 21
+Pileup Information: bunchXing, nvtx: 1 16
+############### GenParticles Analysis ###############
+
+starting event with 497 tracks, and 6 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901130 Lumi Block 31020 Bunch Crossing -1 Fraction 0.758621 NTracks 986 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 23
+Pileup Information: bunchXing, nvtx: -5 22
+Pileup Information: bunchXing, nvtx: -4 25
+Pileup Information: bunchXing, nvtx: -3 25
+Pileup Information: bunchXing, nvtx: -2 23
+Pileup Information: bunchXing, nvtx: -1 24
+Pileup Information: bunchXing, nvtx: 0 34
+Pileup Information: bunchXing, nvtx: 1 33
+############### GenParticles Analysis ###############
+
+starting event with 779 tracks, and 10 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901131 Lumi Block 31020 Bunch Crossing -1 Fraction 0.827243 NTracks 301 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 23
+Pileup Information: bunchXing, nvtx: -5 22
+Pileup Information: bunchXing, nvtx: -4 16
+Pileup Information: bunchXing, nvtx: -3 20
+Pileup Information: bunchXing, nvtx: -2 16
+Pileup Information: bunchXing, nvtx: -1 22
+Pileup Information: bunchXing, nvtx: 0 23
+Pileup Information: bunchXing, nvtx: 1 22
+############### GenParticles Analysis ###############
+
+starting event with 225 tracks, and 2 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901135 Lumi Block 31020 Bunch Crossing -1 Fraction 0.800847 NTracks 472 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901136 Lumi Block 31020 Bunch Crossing -1 Fraction 0.84392 NTracks 551 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901137 Lumi Block 31020 Bunch Crossing -1 Fraction 0.8 NTracks 340 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901138 Lumi Block 31020 Bunch Crossing -1 Fraction 0.790941 NTracks 574 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901139 Lumi Block 31020 Bunch Crossing -1 Fraction 0.778393 NTracks 722 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901140 Lumi Block 31020 Bunch Crossing -1 Fraction 0.767596 NTracks 753 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901142 Lumi Block 31020 Bunch Crossing -1 Fraction 0.838235 NTracks 544 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901144 Lumi Block 31020 Bunch Crossing -1 Fraction 0.767255 NTracks 623 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 29
+Pileup Information: bunchXing, nvtx: -5 27
+Pileup Information: bunchXing, nvtx: -4 35
+Pileup Information: bunchXing, nvtx: -3 16
+Pileup Information: bunchXing, nvtx: -2 17
+Pileup Information: bunchXing, nvtx: -1 24
+Pileup Information: bunchXing, nvtx: 0 25
+Pileup Information: bunchXing, nvtx: 1 18
+############### GenParticles Analysis ###############
+
+starting event with 481 tracks, and 4 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901145 Lumi Block 31020 Bunch Crossing -1 Fraction 0.750305 NTracks 821 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901146 Lumi Block 31020 Bunch Crossing -1 Fraction 0.856655 NTracks 293 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901147 Lumi Block 31020 Bunch Crossing -1 Fraction 0.719489 NTracks 1565 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 37
+Pileup Information: bunchXing, nvtx: -5 46
+Pileup Information: bunchXing, nvtx: -4 39
+Pileup Information: bunchXing, nvtx: -3 37
+Pileup Information: bunchXing, nvtx: -2 38
+Pileup Information: bunchXing, nvtx: -1 35
+Pileup Information: bunchXing, nvtx: 0 43
+Pileup Information: bunchXing, nvtx: 1 28
+############### GenParticles Analysis ###############
+
+starting event with 1285 tracks, and 13 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901148 Lumi Block 31020 Bunch Crossing -1 Fraction 0.73306 NTracks 974 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901149 Lumi Block 31020 Bunch Crossing -1 Fraction 0.830986 NTracks 639 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901150 Lumi Block 31020 Bunch Crossing -1 Fraction 0.850575 NTracks 261 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901151 Lumi Block 31020 Bunch Crossing -1 Fraction 0.802682 NTracks 522 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901152 Lumi Block 31020 Bunch Crossing -1 Fraction 0.826498 NTracks 317 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901153 Lumi Block 31020 Bunch Crossing -1 Fraction 0.833333 NTracks 408 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901154 Lumi Block 31020 Bunch Crossing -1 Fraction 0.833034 NTracks 557 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901155 Lumi Block 31020 Bunch Crossing -1 Fraction 0.831373 NTracks 255 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901156 Lumi Block 31020 Bunch Crossing -1 Fraction 0.777317 NTracks 723 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901157 Lumi Block 31020 Bunch Crossing -1 Fraction 0.780552 NTracks 761 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 12
+Pileup Information: bunchXing, nvtx: -5 20
+Pileup Information: bunchXing, nvtx: -4 11
+Pileup Information: bunchXing, nvtx: -3 22
+Pileup Information: bunchXing, nvtx: -2 15
+Pileup Information: bunchXing, nvtx: -1 20
+Pileup Information: bunchXing, nvtx: 0 25
+Pileup Information: bunchXing, nvtx: 1 18
+############### GenParticles Analysis ###############
+
+starting event with 596 tracks, and 3 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901158 Lumi Block 31020 Bunch Crossing -1 Fraction 0.758403 NTracks 952 Accepted 1
+FilterOutScraping_debug: Run 207214 Event 4901159 Lumi Block 31020 Bunch Crossing -1 Fraction 0.873016 NTracks 189 Accepted 1
+
+=================================  KEEPING NEW EVENT  ========================================
+
+
+BunchXing multiplicity = 8
+Pileup Information: bunchXing, nvtx: -6 13
+Pileup Information: bunchXing, nvtx: -5 13
+Pileup Information: bunchXing, nvtx: -4 15
+Pileup Information: bunchXing, nvtx: -3 14
+Pileup Information: bunchXing, nvtx: -2 17
+Pileup Information: bunchXing, nvtx: -1 17
+Pileup Information: bunchXing, nvtx: 0 10
+Pileup Information: bunchXing, nvtx: 1 10
+############### GenParticles Analysis ###############
+
+starting event with 147 tracks, and 3 muons
+after MC stuff clear
+before muon stuff clear
+after muon stuff clear
+end of branches clear
+FilterOutScraping_debug: Run 207214 Event 4901160 Lumi Block 31020 Bunch Crossing -1 Fraction 0.828179 NTracks 582 Accepted 1
