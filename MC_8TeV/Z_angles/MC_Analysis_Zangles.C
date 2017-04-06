@@ -400,7 +400,7 @@ Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
                 
                 if (fabs(costhetaHel(m2B,m2KPi,m2K,m2Pi,m2Jpsi,m2JpsiPi))<1 ) {
                     double costheta_k = costhetaHel(m2B,m2KPi,m2K,m2Pi,m2Jpsi,m2JpsiPi);
-                    h_cos_theta_Kstar->Fill(costheta_Kstar);
+                    h_cos_theta_Kstar->Fill(costheta_k);
                 }
 
                 if (fabs(costhetaHel(m2B,m2JpsiPi,m2Jpsi,m2Pi,m2K,m2KPi))<1 ) {
