@@ -84,10 +84,6 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
                 OutFile->GetDir(), OutFile->GetFileName());
     }
     
-    
-    // Book NTuple
-    _nt = new TNtupleD("_nt","_nt","B0_mass:KPi_mass:Jpsi_mass:JpsiPi_mass:B0_3mom:KPi_3mom:Jpsi_3mom:K_3mom:Pi_3mom:Theta_Kstar:Theta_Jpsi:Phi:evtNum:runNum:lumiNum"); // output ntuple
-    
     //////// HISTOGRAMS
     // put them here:
     //
@@ -166,6 +162,9 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
     double theta_Kstar=0;
     double theta_z=0;
     double phi=0;
+    
+    double costheta_z=0;
+    double costheta_k=0;
     
     
     double B0_Pt = 0;
@@ -316,8 +315,8 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
             
             double m2KPi = KPiMass*KPiMass;
             double m2JpsiPi = JpsiPiMass*JpsiPiMass;
-            double costheta_k = costhetaHel(m2B,m2KPi,m2K,m2Pi,m2Jpsi,m2JpsiPi);
-            double costheta_z = costhetaHel(m2B,m2JpsiPi,m2Jpsi,m2Pi,m2K,m2KPi);
+            costheta_k = costhetaHel(m2B,m2KPi,m2K,m2Pi,m2Jpsi,m2JpsiPi);
+            costheta_z = costhetaHel(m2B,m2JpsiPi,m2Jpsi,m2Pi,m2K,m2KPi);
             
             if (fabs(costheta_k)<1 ) {
                 h_cos_theta_Kstar->Fill(costheta_k);
