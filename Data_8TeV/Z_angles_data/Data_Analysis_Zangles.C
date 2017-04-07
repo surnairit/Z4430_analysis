@@ -89,6 +89,7 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     //
     
     h_nB0                   = new TH1F("h_nB0","h_nB0",10,0,10);
+    hMuMuMass               = new TH1F("hMuMuMass","hMuMuMass",140,2.6,4.0);
     
     h_theta_Jpsi            = new TH1F("h_theta_Jpsi","J/#psi helicity angle ;#theta_{J/#psi}", 160, -0.03, 3.17);
     h_theta_Jpsi_sel        = new TH1F("h_theta_Jpsi_sel","J/#psi helicity angle after selection;#theta_{J/#psi}", 160, -0.03, 3.17);
