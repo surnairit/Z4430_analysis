@@ -145,6 +145,7 @@ Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
     double KPiMass=0;
     double theta_Jpsi=0;
     double theta_Kstar=0;
+    double theta_z=0;
     double phi=0;
     
     
@@ -389,7 +390,7 @@ Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
                 
                 //double
                 theta_Jpsi = GetThetaMuMu(B0p4, jpsip4, mu1Charge>0 ? mu1_p4 : mu2_p4, beam_energy, jpsi_mass, muon_mass);
-                h_cos_theta_Jpsi->Fill(theta_Jpsi);
+                h_cos_theta_Jpsi->Fill(TMath::Cos(theta_Jpsi));
                 //        phi = getPlanesAngle(B0p4, kp4, pip4, muM_p4, muP_p4) ;
                 //        phi = GetPhi(B0p4,mu1_p4, mu2_p4, kp4, pip4 );
                 phi = GetPhi(B0p4,mu1Charge>0 ? mu1_p4 : mu2_p4,mu1Charge>0 ? mu2_p4 : mu1_p4, kp4, pip4 );
