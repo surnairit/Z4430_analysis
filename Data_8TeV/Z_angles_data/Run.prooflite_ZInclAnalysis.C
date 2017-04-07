@@ -2,8 +2,8 @@
     /////////////////////////////////////////////////////
     //
     // INPUT DATA SAMPLE
-    TDSet* dataset = new TDSet("TTree", "Z_data","mkcands");
-//    TDSet* dataset = new TDSet("TTree", "Z_data");
+//    TDSet* dataset = new TDSet("TTree", "Z_data","mkcands");
+    TDSet* dataset = new TDSet("TTree", "Z_data");
     //
     ////////////////////////////////////////////////////// full path is mandatory
     //
