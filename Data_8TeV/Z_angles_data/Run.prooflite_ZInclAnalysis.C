@@ -10,12 +10,12 @@
 
 
     dataset->Add("/lustre/cms/store/user/nsur/Jpsi_8TeV_data_small_ntuples/MuOniaRun2012A_29Dec_MuMuKPiPAT_ntpl_merged_0000_1-818.root");
-/*
+
     dataset->Add("/lustre/cms/store/user/nsur/Jpsi_8TeV_data_small_ntuples/MuOniaRun2012B_08Oct_MuMuKPiPAT_ntpl_merged_0000_1-500.root");
     dataset->Add("/lustre/cms/store/user/nsur/Jpsi_8TeV_data_small_ntuples/MuOniaRun2012B_08Oct_MuMuKPiPAT_ntpl_merged_0000_501-999.root");
     dataset->Add("/lustre/cms/store/user/nsur/Jpsi_8TeV_data_small_ntuples/MuOniaRun2012B_08Oct_MuMuKPiPAT_ntpl_merged_0000_1000-1999.root");
     dataset->Add("/lustre/cms/store/user/nsur/Jpsi_8TeV_data_small_ntuples/MuOniaRun2012B_08Oct_MuMuKPiPAT_ntpl_merged_0000_2000-2546.root");
-    
+/*    
     dataset->Add("/lustre/cms/store/user/nsur/Jpsi_8TeV_data_small_ntuples/MuOniaRun2012C_29Dec_MuMuKPiPAT_ntpl_merged_0001_1000-1999.root");
     dataset->Add("/lustre/cms/store/user/nsur/Jpsi_8TeV_data_small_ntuples/MuOniaRun2012C_31Dec_MuMuKPiPAT_ntpl_merged_0000_1-999.root");
     dataset->Add("/lustre/cms/store/user/nsur/Jpsi_8TeV_data_small_ntuples/MuOniaRun2012C_31Dec_MuMuKPiPAT_ntpl_merged_0002_2000-2015.root");

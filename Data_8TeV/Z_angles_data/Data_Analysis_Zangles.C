@@ -73,7 +73,7 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     TString option = GetOption();
     
     //   OutFile = new TProofOutputFile( "MuMuPiK_Jpsi_MuOnia2012B_output_small_ntpls.root" );
-    OutFile = new TProofOutputFile( "MuMuPiK_Jpsi_MuOnia2012A_output_Zangles.root" );
+    OutFile = new TProofOutputFile( "MuMuPiK_Jpsi_MuOnia2012AB_output_Zangles.root" );
     
     //    OutFile = new TProofOutputFile( "MuMuPiK_Jpsi_MuOnia2012B_output_small_ntpls_Dalitzfit.root" );
     fOut = OutFile->OpenFile("RECREATE");
