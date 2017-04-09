@@ -615,10 +615,10 @@ double Data_Analysis_Zangles::alpha(double theta, double phi, double m2kpi, doub
     muP.SetPxPyPzE(pmuPx,pmuPy,pmuPz,EmuP);
     
     double scale1 = ((Kstar_jpsi.Vect()).Dot(muP.Vect()))/(muP.Vect().Mag2());
-    TVector3 aKstar = (Kstar_jpsi.Vect() - scale1*muP.Vect();
+    TVector3 aKstar = Kstar_jpsi.Vect() - scale1*muP.Vect();
     
     double scale2 = ((Pi_jpsi.Vect()).Dot(muP.Vect()))/(muP.Vect().Mag2());
-    TVector3 aPi = (Pi_jpsi.Vect() - scale2*muP.Vect();
+    TVector3 aPi = Pi_jpsi.Vect() - scale2*muP.Vect();
         
     double cosalpha = (aPi.Dot(aKstar))/((aPi.Mag())*(aKstar.Mag()));
     
