@@ -620,6 +620,8 @@ double Data_Analysis_Zangles::alpha(double theta, double phi, double m2kpi, doub
     double EmuP = sqrt(muon_mass*muon_mass+mumom*mumom);
     muP.SetPxPyPzE(pmuPx,pmuPy,pmuPz,EmuP);
     
+    
+/*
     double scale1 = ((Kstar_jpsi.Vect()).Dot(muP.Vect()))/(muP.Vect().Mag2());
     TVector3 aKstar = Kstar_jpsi.Vect() - scale1*muP.Vect();
     
@@ -627,8 +629,17 @@ double Data_Analysis_Zangles::alpha(double theta, double phi, double m2kpi, doub
     TVector3 aPi = Pi_jpsi.Vect() - scale2*muP.Vect();
         
     double cosalpha = (aPi.Dot(aKstar))/((aPi.Mag())*(aKstar.Mag()));
-    
+ 
     return acos(cosalpha);
+*/
+ 
+    TVector3	MuPPiPlane	=	muP.Vect().Cross(Pi_jpsi.Vect());
+    TVector3	MuPKstPlane		=	muP.Vect().Cross(Kstar_jpsi.Vect());
+    double alph;
+    alph	=	MuPPiPlane.Angle(MuPKstPlane);
+    return
+    alph;
+ 
     
 }
 //================ Alpha =============================
