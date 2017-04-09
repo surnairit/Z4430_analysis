@@ -678,10 +678,10 @@ double Data_Analysis_Zangles::GetPhi(TLorentzVector LoreVecB0,TLorentzVector Lor
     TVector3	MuMuPlane	=	LoreVecMup.Vect().Cross(LoreVecMum.Vect());
     TVector3	KstPlane		=	LoreVecK.Vect().Cross(LoreVecPi.Vect());
     double phiKstMuMuPlane;
-    if	(	MuMuPlane.Cross(KstPlane).Dot(-LoreVecB0.Vect())	>	0.0	)
+//    if	(	MuMuPlane.Cross(KstPlane).Dot(-LoreVecB0.Vect())	>	0.0	)
         phiKstMuMuPlane	=	MuMuPlane.Angle(KstPlane);
-    else
-        phiKstMuMuPlane	=	-MuMuPlane.Angle(KstPlane);
+//    else
+//        phiKstMuMuPlane	=	-MuMuPlane.Angle(KstPlane);
     return
     phiKstMuMuPlane;
 }
