@@ -636,9 +636,12 @@ double Data_Analysis_Zangles::alpha(double theta, double phi, double m2kpi, doub
     TVector3	MuPPiPlane	=	muP.Vect().Cross(Pi_jpsi.Vect());
     TVector3	MuPKstPlane		=	muP.Vect().Cross(Kstar_jpsi.Vect());
     double alph;
-    alph	=	MuPPiPlane.Angle(MuPKstPlane);
-    return
-    alph;
+    if	(	MuPPiPlane.Cross(MuPKstPlane).Dot(-J_b0.Vect())	>	0.0	)
+        alph	=	MuPPiPlane.Angle(MuPKstPlane);
+    else
+        alph	=	-MuPPiPlane.Angle(MuPKstPlane);
+        
+    return alph;
  
     
 }
@@ -678,10 +681,10 @@ double Data_Analysis_Zangles::GetPhi(TLorentzVector LoreVecB0,TLorentzVector Lor
     TVector3	MuMuPlane	=	LoreVecMup.Vect().Cross(LoreVecMum.Vect());
     TVector3	KstPlane		=	LoreVecK.Vect().Cross(LoreVecPi.Vect());
     double phiKstMuMuPlane;
-//    if	(	MuMuPlane.Cross(KstPlane).Dot(-LoreVecB0.Vect())	>	0.0	)
+    if	(	MuMuPlane.Cross(KstPlane).Dot(-LoreVecB0.Vect())	>	0.0	)
         phiKstMuMuPlane	=	MuMuPlane.Angle(KstPlane);
-//    else
-//        phiKstMuMuPlane	=	-MuMuPlane.Angle(KstPlane);
+    else
+        phiKstMuMuPlane	=	-MuMuPlane.Angle(KstPlane);
     return
     phiKstMuMuPlane;
 }
