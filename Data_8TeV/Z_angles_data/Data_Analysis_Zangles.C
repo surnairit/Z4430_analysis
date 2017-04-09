@@ -170,6 +170,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
     
     double costheta_z=0;
     double costheta_k=0;
+    double alpha_angle = 0;
     
     
     double B0_Pt = 0;
@@ -322,6 +323,8 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
             double m2JpsiPi = JpsiPiMass*JpsiPiMass;
             costheta_k = costhetaHel(m2B,m2KPi,m2K,m2Pi,m2Jpsi,m2JpsiPi);
             costheta_z = costhetaHel(m2B,m2JpsiPi,m2Jpsi,m2Pi,m2K,m2KPi);
+            alpha_angle = alpha(theta_Jpsi,phi,m2KPi,m2JpsiPi);
+            
             
             if (fabs(costheta_k)<1 ) {
                 h_cos_theta_Kstar->Fill(costheta_k);
@@ -332,6 +335,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
             }
             
             h_phi_planes->Fill(phi);
+            h_alpha->Fill(alpha_angle);
             
             //  hjpsifromBMass->Fill((*MuMuMass)[(*B0MuMuIdx)[myB0Idx]]);
             //  int jpsiId = (*B0MuMuIdx)[myB0Idx];
@@ -420,6 +424,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
                     }
                     
                     h_phi_planes_sel->Fill(phi);
+                    h_alpha_sel->Fill(alpha_angle);
                     
                 } // Dalitz peak
                 
@@ -448,6 +453,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
                 }
                 
                 h_phi_planes_sel_nB01->Fill(phi);
+                h_alpha_sel_nB01->Fill(alpha_angle);
                 
             } // Dalitz peak
 
