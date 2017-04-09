@@ -104,6 +104,9 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     
     h_phi_planes            = new TH1F("h_phi_planes","Angle between K#pi and #mu#mu planes;#phi(J/#psi,K*)", 160, -3.2, 3.2) ;
     h_phi_planes_sel        = new TH1F("h_phi_planes_sel","Angle between K#pi and #mu#mu planes after selection;#phi(J/#psi,K*)", 160, -3.2, 3.2) ;
+
+    h_alpha            = new TH1F("h_alpha","Angle between #mu+#pi and #mu+K* planes;#alpha", 160, -3.2, 3.2) ;
+    h_alpha_sel        = new TH1F("h_alpha_sel","Angle between #mu+#pi and #mu+K* planes planes after selection;#alpha", 160, -3.2, 3.2) ;
     
     
     // nB0 = 1 variables
@@ -116,6 +119,7 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     h_cos_theta_Z_sel_nB01   = new TH1F("h_cos_theta_Z_sel_nB01","Cosine of Z helicity angle after selection nB0=1;cos(#theta_{Z})", 102, -1.02, 1.02);
     
     h_phi_planes_sel_nB01        = new TH1F("h_phi_planes_sel_nB01","Angle between K#pi and #mu#mu planes after selection nB0=1;#phi(J/#psi,K*)", 160, -3.2, 3.2) ;
+    h_alpha_sel_nB01        = new TH1F("h_alpha_sel_nB01","Angle between #mu+#pi and #mu+K* planes after selection nB0=1;#alpha", 160, -3.2, 3.2) ;
     
     hjpsiKPiMassSelAltZoom_nB01                 = new TH1F("hjpsiKPiMassSelAltZoom_nB01","hjpsiKPiMassSelAltZoom_nB01", 90, 5.10, 5.46);
     
@@ -489,11 +493,15 @@ void Data_Analysis_Zangles::SlaveTerminate()
         h_phi_planes->Write();
         h_phi_planes_sel->Write();
         
+        h_alpha->Write();
+        h_alpha_sel->Write();
+        
         // nB0 = 1 variables
         h_theta_Jpsi_sel_nB01->Write();
         h_cos_theta_Jpsi_sel_nB01->Write();
         h_cos_theta_Kstar_sel_nB01->Write();
         h_phi_planes_sel_nB01->Write();
+        h_alpha_sel_nB01->Write();
         
         h_cos_theta_Z_sel_nB01->Write();
         
@@ -558,6 +566,66 @@ double Data_Analysis_Zangles::costhetaHel(double m2Mom, double m2Dau, double m2G
 }
 //================ costheta_helicity ===========================
 
+
+//================ Alpha =============================
+double Data_Analysis_Zangles::alpha(double theta, double phi, double m2kpi, double m2jpsipi) const
+{
+    double kmom = dec2mm(sqrt(m2kpi),kaonCh_mass,pionCh_mass);
+    double costh_k = costhetaHel(m2B,m2kpi,m2K,m2Pi,m2Jpsi,m2jpsipi);
+    
+    TLorentzVector K;
+    double pkx = kmom*sin(acos(costh_k));
+    double pky = 0.0;
+    double pkz = kmom*costh_k;
+    double Ek = sqrt(m2K+kmom*kmom);
+    K.SetPxPyPzE(pkx,pky,pkz,Ek);
+    TLorentzVector Pi;
+    double ppix = -kmom*sin(acos(costh_k));
+    double ppiy = 0.0;
+    double ppiz = -kmom*costh_k;
+    double Epi = sqrt(m2Pi+kmom*kmom);
+    Pi.SetPxPyPzE(ppix,ppiy,ppiz,Epi);
+    
+    // Jpsi mom = K* mom in B0 rest frame
+    double jpsimom = dec2mm(B0_mass,jpsi_mass,sqrt(m2kpi));
+    TLorentzVector J_b0;
+    J_b0.SetPxPyPzE(0.0,0.0,-jpsimom,sqrt(m2Jpsi+jpsimom*jpsimom));
+    TLorentzVector Kstar_b0;
+    Kstar_b0.SetPxPyPzE(0.0,0.0,jpsimom,sqrt(m2kpi+jpsimom*jpsimom));
+    
+    // boosting K* to Jpsi rest frame
+    TLorentzVector Kstar_jpsi = Kstar_b0;
+    Kstar_jpsi.Boost( -J_b0.BoostVector() );
+    
+    // boosting Jpsi to K* rest frame
+    TLorentzVector J_Kstar = J_b0;
+    J_Kstar.Boost( -Kstar_b0.BoostVector() );
+    
+    // boosting Pi in K* rest frame to Jpsi rest frame
+    TLorentzVector Pi_jpsi = Pi;
+    Pi_jpsi.Boost( -J_Kstar.BoostVector() );
+    
+    // Muon 4 momenta in Jpsi rest frame
+    double mumom = dec2mm(jpsi_mass,muon_mass,muon_mass);
+    TLorentzVector muP;
+    double pmuPx = mumom*sin(theta)*cos(phi);
+    double pmuPy = -mumom*sin(theta)*sin(phi);
+    double pmuPz = -mumom*cos(theta);
+    double EmuP = sqrt(muon_mass*muon_mass+mumom*mumom);
+    muP.SetPxPyPzE(pmuPx,pmuPy,pmuPz,EmuP);
+    
+    double scale1 = ((Kstar_jpsi.Vect()).Dot(muP.Vect()))/(muP.Vect().Mag2());
+    TVector3 aKstar = (Kstar_jpsi.Vect() - scale1*muP.Vect();
+    
+    double scale2 = ((Pi_jpsi.Vect()).Dot(muP.Vect()))/(muP.Vect().Mag2());
+    TVector3 aPi = (Pi_jpsi.Vect() - scale2*muP.Vect();
+        
+    double cosalpha = (aPi.Dot(aKstar))/((aPi.Mag())*(aKstar.Mag()));
+    
+    return acos(cosalpha);
+    
+}
+//================ Alpha =============================
 
 // functions calculating angles
 

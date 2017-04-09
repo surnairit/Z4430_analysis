@@ -716,6 +716,9 @@ class Data_Analysis_Zangles : public TSelector {
     TH1F* h_phi_planes;
     TH1F* h_phi_planes_sel;
     
+    TH1F* h_alpha;
+    TH1F* h_alpha_sel;
+    
     
     // nB0 = 1 variables
     
@@ -724,6 +727,7 @@ class Data_Analysis_Zangles : public TSelector {
     TH1F* h_cos_theta_Kstar_sel_nB01;
     TH1F* h_phi_planes_sel_nB01;
     
+    TH1F* h_alpha_sel_nB01;
     TH1F* h_cos_theta_Z_sel_nB01;
     
     
@@ -749,7 +753,8 @@ class Data_Analysis_Zangles : public TSelector {
     //================ costheta_helicity ===========================
     double costhetaHel(double m2Mom, double m2Dau, double m2GDau, double m2GDau2, double m2Dau2, double m2Dau2GDau2) const;
     
-    
+    //================ Alpha =============================
+    double alpha(double theta, double phi, double m2kpi, double m2jpsipi) const;
     
     ClassDef(Data_Analysis_Zangles,0);
 };
