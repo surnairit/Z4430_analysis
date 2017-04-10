@@ -687,7 +687,7 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
     K_Zc.Boost( -Zc_B0.BoostVector() );
     
     // 4 momenta in Zc rest frame (with a different coordinate system)
-    double thetaz = acos(  costhetaHel(m2B,m2JpsiPi,m2Jpsi,m2Pi,m2K,m2KPi)  );
+    double thetaz = acos(  costhetaHel(m2B,m2jpsipi,m2Jpsi,m2Pi,m2K,m2kpi)  );
     double pk = K_Zc.Pz();
     double Ek = sqrt(m2K+pk*pk);
     TLorentzVector K_Zc;
@@ -753,7 +753,7 @@ double Data_Analysis_Zangles::phitilde(double theta, double phi, double m2kpi, d
     K_Zc.Boost( -Zc_B0.BoostVector() );
     
     // 4 momenta in Zc rest frame (with a different coordinate system)
-    double thetaz = acos(  costhetaHel(m2B,m2JpsiPi,m2Jpsi,m2Pi,m2K,m2KPi)  );
+    double thetaz = acos(  costhetaHel(m2B,m2jpsipi,m2Jpsi,m2Pi,m2K,m2kpi)  );
     double pk = K_Zc.Pz();
     double Ek = sqrt(m2K+pk*pk);
     TLorentzVector K_Zc;
