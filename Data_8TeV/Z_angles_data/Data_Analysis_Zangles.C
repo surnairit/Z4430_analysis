@@ -727,11 +727,14 @@ double costhetatilde(double theta, double phi, double m2kpi, double m2jpsipi) co
     double a = pow((Ek_jpsi+Emu+Epi_jpsi),2) - (pkx*pkx + pkz*pkz +2.0*pkz*ppiz + pmu*pmu + ppiz*ppiz );
     double b = 2.0*pmu*(pkz+ppiz);
     double c = 2.0*pkx*pmu*cos(phi);
-    
+/*
     if ( (b*b+c*c-a*a)>=0.0 ) {
         return ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
     }
     else {return 10.0;}
+*/
+        return 0.0;
+ 
 }
 //================ Theta tilde =======================
 
