@@ -683,12 +683,12 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
     Zc_B0.SetPxPyPzE(0.0,0.0,-pk_B0,sqrt(m2jpsipi+pk_B0*pk_B0));
     
     // Boost K to Zc rest frame
-    TLorentzVector K_Zc = K_B0;
-    K_Zc.Boost( -Zc_B0.BoostVector() );
+    TLorentzVector K_Zc_old = K_B0;
+    K_Zc_old.Boost( -Zc_B0.BoostVector() );
     
     // 4 momenta in Zc rest frame (with a different coordinate system)
     double thetaz = acos(  costhetaHel(m2B,m2jpsipi,m2Jpsi,m2Pi,m2K,m2kpi)  );
-    double pk = K_Zc.Pz();
+    double pk = K_Zc_old.Pz();
     double Ek = sqrt(m2K+pk*pk);
     TLorentzVector K_Zc;
     K_Zc.SetPxPyPzE(pk*sin(thetaz),0.0,pk*cos(thetaz),Ek);
@@ -724,7 +724,7 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
     double Epi_jpsi = Pi_jpsi.E();
     double ppiz = Pi_jpsi.Pz();
     
-    double a = pow((Ek_jpsi+Emu+Epi_jpsi),2) - (pkx*pkx + pkz*pkz +2.0*pkz*ppiz + pmu*pmu + ppiz*ppiz );
+    double a = pow((Ek_jpsi+Emu+Epi_jpsi),2) - m2kpimu - (pkx*pkx + pkz*pkz +2.0*pkz*ppiz + pmu*pmu + ppiz*ppiz );
     double b = 2.0*pmu*(pkz+ppiz);
     double c = 2.0*pkx*pmu*cos(phi);
 
@@ -749,12 +749,12 @@ double Data_Analysis_Zangles::phitilde(double theta, double phi, double m2kpi, d
     Zc_B0.SetPxPyPzE(0.0,0.0,-pk_B0,sqrt(m2jpsipi+pk_B0*pk_B0));
     
     // Boost K to Zc rest frame
-    TLorentzVector K_Zc = K_B0;
-    K_Zc.Boost( -Zc_B0.BoostVector() );
+    TLorentzVector K_Zc_old = K_B0;
+    K_Zc_old.Boost( -Zc_B0.BoostVector() );
     
     // 4 momenta in Zc rest frame (with a different coordinate system)
     double thetaz = acos(  costhetaHel(m2B,m2jpsipi,m2Jpsi,m2Pi,m2K,m2kpi)  );
-    double pk = K_Zc.Pz();
+    double pk = K_Zc_old.Pz();
     double Ek = sqrt(m2K+pk*pk);
     TLorentzVector K_Zc;
     K_Zc.SetPxPyPzE(pk*sin(thetaz),0.0,pk*cos(thetaz),Ek);
@@ -790,7 +790,7 @@ double Data_Analysis_Zangles::phitilde(double theta, double phi, double m2kpi, d
     double Epi_jpsi = Pi_jpsi.E();
     double ppiz = Pi_jpsi.Pz();
     
-    double a = pow((Ek_jpsi+Emu+Epi_jpsi),2) - (pkx*pkx + pkz*pkz +2.0*pkz*ppiz + pmu*pmu + ppiz*ppiz );
+    double a = pow((Ek_jpsi+Emu+Epi_jpsi),2) - m2kpimu - (pkx*pkx + pkz*pkz +2.0*pkz*ppiz + pmu*pmu + ppiz*ppiz );
     double b = 2.0*pmu*(pkz+ppiz);
     double c = 2.0*pkx*pmu*cos(phi);
     
