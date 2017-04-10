@@ -766,10 +766,10 @@ class Data_Analysis_Zangles : public TSelector {
     double alpha(double theta, double phi, double m2kpi, double m2jpsipi) const;
     
     //================ theta tilde =======================
-    double costhetatilde(double theta, double phi, double m2kpi, double m2jpsipi) const;
+    double costhetatilde(double theta, double phi, double m2kpi, double m2jpsipi); //const;
     
     //================ phi tilde =======================
-    double phitilde(double theta, double phi, double m2kpi, double m2jpsipi) const;
+    double phitilde(double theta, double phi, double m2kpi, double m2jpsipi); //const;
     
     ClassDef(Data_Analysis_Zangles,0);
 };
