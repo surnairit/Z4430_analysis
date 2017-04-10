@@ -713,11 +713,17 @@ class Data_Analysis_Zangles : public TSelector {
     TH1F* h_cos_theta_Z;
     TH1F* h_cos_theta_Z_sel;
     
+    TH1F* h_cos_thetatilde;
+    TH1F* h_cos_thetatilde_sel;
+    
     TH1F* h_phi_planes;
     TH1F* h_phi_planes_sel;
     
     TH1F* h_alpha;
     TH1F* h_alpha_sel;
+    
+    TH1F* h_phitilde;
+    TH1F* h_phitilde_sel;
     
     
     // nB0 = 1 variables
@@ -729,6 +735,9 @@ class Data_Analysis_Zangles : public TSelector {
     
     TH1F* h_alpha_sel_nB01;
     TH1F* h_cos_theta_Z_sel_nB01;
+    TH1F* h_cos_thetatilde_sel_nB01;
+    
+    TH1F* h_phitilde_sel_nB01;
     
     
     TH1F* hjpsiKPiMassSelAltZoom_nB01;
@@ -755,6 +764,12 @@ class Data_Analysis_Zangles : public TSelector {
     
     //================ Alpha =============================
     double alpha(double theta, double phi, double m2kpi, double m2jpsipi) const;
+    
+    //================ theta tilde =======================
+    double costhetatilde(double theta, double phi, double m2kpi, double m2jpsipi) const;
+    
+    //================ phi tilde =======================
+    double phitilde(double theta, double phi, double m2kpi, double m2jpsipi) const;
     
     ClassDef(Data_Analysis_Zangles,0);
 };
