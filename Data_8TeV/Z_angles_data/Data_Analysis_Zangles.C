@@ -634,7 +634,7 @@ double Data_Analysis_Zangles::alpha(double theta, double phi, double m2kpi, doub
 */
  
     TVector3	MuPPiPlane	=	muP.Vect().Cross(Pi_jpsi.Vect()); //muP.Vect().Cross(Pi_jpsi.Vect());
-    TVector3	MuPKstPlane		=	muP.Vect().Cross(Kstar_b0.Vect()); //muP.Vect().Cross(Kstar_jpsi.Vect());
+    TVector3	MuPKstPlane		=	muP.Vect().Cross(Kstar_jpsi.Vect()); //muP.Vect().Cross(Kstar_jpsi.Vect());
     double alph;
     if	(	MuPPiPlane.Cross(MuPKstPlane).Dot(-J_b0.Vect())	>	0.0	)
         alph	=	MuPPiPlane.Angle(MuPKstPlane);
