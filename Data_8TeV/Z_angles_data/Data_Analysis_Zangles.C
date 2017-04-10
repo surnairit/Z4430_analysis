@@ -672,7 +672,7 @@ double Data_Analysis_Zangles::alpha(double theta, double phi, double m2kpi, doub
 
 
 //================ Theta tilde =======================
-double costhetatilde(double theta, double phi, double m2kpi, double m2jpsipi) //const
+double costhetatilde(double theta, double phi, double m2kpi, double m2jpsipi) const
 {
     // K momentum in B0 frame
     double pk_B0 = dec2mm(B0_mass,sqrt(m2jpsipi),kaonCh_mass);
@@ -735,7 +735,7 @@ double costhetatilde(double theta, double phi, double m2kpi, double m2jpsipi) //
 }
 //================ Theta tilde =======================
 
-
+/*
 //================ phi tilde =======================
 double phitilde(double theta, double phi, double m2kpi, double m2jpsipi) //const
 {
@@ -815,7 +815,7 @@ double phitilde(double theta, double phi, double m2kpi, double m2jpsipi) //const
 }
 //================ phi tilde =======================
 
-
+*/
 
 
 
