@@ -102,7 +102,7 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     h_cos_theta_Z       = new TH1F("h_cos_theta_Z","Cosine of Z helicity angle ;cos(#theta_{Z})", 102, -1.02, 1.02);
     h_cos_theta_Z_sel   = new TH1F("h_cos_theta_Z_sel","Cosine of Z helicity angle after selection;cos(#theta_{Z})", 102, -1.02, 1.02);
     
-    h_cos_thetatilde       = new TH1F("h_cos_thetatilde","Cosine of J/#psi helicity angle ;cos(#tilde{#theta})", 102, -1.02, 1.02);
+    h_cos_thetatilde       = new TH1F("h_cos_thetatilde","Cosine of J/#psi helicity angle ;cos(#tilde{#theta})", 1002, -10.02, 10.02);
     h_cos_thetatilde_sel   = new TH1F("h_cos_thetatilde_sel","Cosine of J/#psi helicity angle after selection;cos(#tilde{#theta})", 102, -1.02, 1.02);
     
     
