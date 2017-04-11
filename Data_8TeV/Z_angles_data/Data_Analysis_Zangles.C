@@ -740,7 +740,7 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
 
 //    if ( (b*b+c*c-a*a)>=0.0 ) {
 //       return ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
-        return a;
+        return m2kpimu;
 //    }
 //    else {return 10.0;}
  
