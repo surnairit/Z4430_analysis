@@ -724,7 +724,7 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
     double pmu = dec2mm(m2Jpsi,muon_mass,muon_mass);
     double Emu = sqrt(muon_mass*muon_mass + pmu*pmu);
     
-    double denom = sqrt( (0.25*(m2B-m2kpi+m2Jpsi)-m2B*m2Jpsi)*(0.25*m2Jpsi*m2Jpsi-muon_mass*muon_mass*m2Jpsi) );
+    double denom = sqrt( (0.25*pow((m2B-m2kpi+m2Jpsi),2)-m2B*m2Jpsi)*(0.25*m2Jpsi*m2Jpsi-muon_mass*muon_mass*m2Jpsi) );
     double m2kpimu = 0.5*( m2B+m2kpi+2.0*muon_mass*muon_mass-m2Jpsi-4.0*cos(theta)*denom/m2Jpsi );
     
     double Ek_jpsi = K_jpsi.E();
@@ -738,11 +738,10 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
     double b = 2.0*pmu*(pkz+ppiz);
     double c = 2.0*pkx*pmu*cos(phi);
 
-//    if ( (b*b+c*c-a*a)>=0.0 ) {
-//       return ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
-        return m2kpimu;
-//    }
-//    else {return 10.0;}
+    if ( (b*b+c*c-a*a)>=0.0 ) {
+       return ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
+    }
+    else {return 10.0;}
  
 }
 //================ Theta tilde =======================
@@ -791,7 +790,7 @@ double Data_Analysis_Zangles::phitilde(double theta, double phi, double m2kpi, d
     double pmu = dec2mm(m2Jpsi,muon_mass,muon_mass);
     double Emu = sqrt(muon_mass*muon_mass + pmu*pmu);
     
-    double denom = sqrt( (0.25*(m2B-m2kpi+m2Jpsi)-m2B*m2Jpsi)*(0.25*m2Jpsi*m2Jpsi-muon_mass*muon_mass*m2Jpsi) );
+    double denom = sqrt( (0.25*pow((m2B-m2kpi+m2Jpsi),2)-m2B*m2Jpsi)*(0.25*m2Jpsi*m2Jpsi-muon_mass*muon_mass*m2Jpsi) );
     double m2kpimu = 0.5*( m2B+m2kpi+2.0*muon_mass*muon_mass-m2Jpsi-4.0*cos(theta)*denom/m2Jpsi );
     
     double Ek_jpsi = K_jpsi.E();
