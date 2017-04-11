@@ -739,7 +739,8 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
     double c = 2.0*pkx*pmu*cos(phi);
 
 //    if ( (b*b+c*c-a*a)>=0.0 ) {
-        return ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
+//       return ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
+        return c;
 //    }
 //    else {return 10.0;}
  
