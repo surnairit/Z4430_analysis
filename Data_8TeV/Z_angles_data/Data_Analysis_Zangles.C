@@ -738,10 +738,10 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
     double b = 2.0*pmu*(pkz+ppiz);
     double c = 2.0*pkx*pmu*cos(phi);
 
-    if ( (b*b+c*c-a*a)>=0.0 ) {
+//    if ( (b*b+c*c-a*a)>=0.0 ) {
         return ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
-    }
-    else {return 10.0;}
+//    }
+//    else {return 10.0;}
  
 }
 //================ Theta tilde =======================
