@@ -729,6 +729,12 @@ class MC_Analysis_Zangles : public TSelector {
     TH1F* h_cos_theta_Kstar;
     TH1F* h_cos_theta_Z;
     TH1F* h_phi_planes;
+    
+    TH1F* h_alpha;
+    
+    TH1F* h_cos_thetatilde;
+    TH1F* h_phitilde;
+    
 
     
     Double_t B0_mass, muon_mass, phi_mass, jpsi_mass, psi2S_mass, pionCh_mass, kaonCh_mass, proton_mass, beam_energy, m2B, m2K, m2Pi, m2Jpsi ;
@@ -745,6 +751,14 @@ class MC_Analysis_Zangles : public TSelector {
     //================ costheta_helicity ===========================
     double costhetaHel(double m2Mom, double m2Dau, double m2GDau, double m2GDau2, double m2Dau2, double m2Dau2GDau2) const;
 
+    //================ Alpha =============================
+    double alpha(double theta, double phi, double m2kpi, double m2jpsipi) const;
+    
+    //================ theta tilde =======================
+    double costhetatilde(double theta, double phi, double m2kpi, double m2jpsipi) const;
+    
+    //================ phi tilde =======================
+    double phitilde(double theta, double phi, double m2kpi, double m2jpsipi) const;
     
     ClassDef(MC_Analysis_Zangles,0);
 };

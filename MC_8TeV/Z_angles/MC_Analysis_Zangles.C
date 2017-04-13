@@ -107,6 +107,12 @@ void MC_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     h_cos_theta_Z           = new TH1F("h_cos_theta_Z","Cosine of Z helicity angle ;cos(#theta_{Z})", 102, -1.02, 1.02);
     h_phi_planes            = new TH1F("h_phi_planes","Angle between K#pi and #mu#mu planes;#phi(J/#psi,K*)", 160, -3.2, 3.2) ;
 
+    h_cos_thetatilde       = new TH1F("h_cos_thetatilde","Cosine of J/#psi helicity angle ;cos(#tilde{#theta})", 102, -1.02, 1.02);
+    h_phitilde            = new TH1F("h_phitilde","Angle between #mu+#pi and K#pi planes;#tilde{#phi}", 160, -3.2, 3.2) ;
+    h_alpha            = new TH1F("h_alpha","Angle between #mu+#pi and #mu+K* planes;#alpha", 160, -3.2, 3.2) ;
+
+
+
 }
 
 Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
@@ -147,6 +153,12 @@ Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
     double theta_Kstar=0;
     double theta_z=0;
     double phi=0;
+    
+    double costheta_z=0;
+    double costheta_k=0;
+    double alpha_angle = 0;
+    double costheta_tilde = 0.0;
+    double phi_tilde = 0.0;
     
     
     double B0_Pt = 0;
@@ -398,6 +410,12 @@ Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
                 
                 double m2KPi = KPiMass*KPiMass;
                 double m2JpsiPi = JpsiPiMass*JpsiPiMass;
+                costheta_k = costhetaHel(m2B,m2KPi,m2K,m2Pi,m2Jpsi,m2JpsiPi);
+                costheta_z = costhetaHel(m2B,m2JpsiPi,m2Jpsi,m2Pi,m2K,m2KPi);
+                alpha_angle = alpha(theta_Jpsi,phi,m2KPi,m2JpsiPi);
+                costheta_tilde = costhetatilde(theta_Jpsi,phi,m2KPi,m2JpsiPi);
+                phi_tilde = phitilde(theta_Jpsi,phi,m2KPi,m2JpsiPi);
+
                 
                 if (fabs(costhetaHel(m2B,m2KPi,m2K,m2Pi,m2Jpsi,m2JpsiPi))<1 ) {
                     double costheta_k = costhetaHel(m2B,m2KPi,m2K,m2Pi,m2Jpsi,m2JpsiPi);
@@ -408,6 +426,12 @@ Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
                     double costheta_z = costhetaHel(m2B,m2JpsiPi,m2Jpsi,m2Pi,m2K,m2KPi);
                     h_cos_theta_Z->Fill(costheta_z);
                 }
+                
+                h_phi_planes->Fill(phi);
+                h_alpha->Fill(alpha_angle);
+                h_cos_thetatilde->Fill(costheta_tilde);
+                h_phitilde->Fill(phi_tilde);
+
                
             } // cuts tight loop
             
@@ -451,6 +475,11 @@ void MC_Analysis_Zangles::SlaveTerminate()
         h_cos_theta_Kstar->Write();
         h_cos_theta_Z->Write();
         h_phi_planes->Write();
+        
+        h_cos_thetatilde->Write();
+        h_phitilde->Write();
+        h_alpha->Write();
+
 
         
         
@@ -510,6 +539,229 @@ double MC_Analysis_Zangles::costhetaHel(double m2Mom, double m2Dau, double m2GDa
 
 }
 //================ costheta_helicity ===========================
+
+//================ Alpha =============================
+double MC_Analysis_Zangles::alpha(double theta, double phi, double m2kpi, double m2jpsipi) const
+{
+    double kmom = dec2mm(sqrt(m2kpi),kaonCh_mass,pionCh_mass);
+    double costh_k = costhetaHel(m2B,m2kpi,m2K,m2Pi,m2Jpsi,m2jpsipi);
+    
+    TLorentzVector K;
+    double pkx = kmom*sin(acos(costh_k));
+    double pky = 0.0;
+    double pkz = kmom*costh_k;
+    double Ek = sqrt(m2K+kmom*kmom);
+    K.SetPxPyPzE(pkx,pky,pkz,Ek);
+    TLorentzVector Pi;
+    double ppix = -kmom*sin(acos(costh_k));
+    double ppiy = 0.0;
+    double ppiz = -kmom*costh_k;
+    double Epi = sqrt(m2Pi+kmom*kmom);
+    Pi.SetPxPyPzE(ppix,ppiy,ppiz,Epi);
+    
+    // Jpsi mom = K* mom in B0 rest frame
+    double jpsimom = dec2mm(B0_mass,jpsi_mass,sqrt(m2kpi));
+    TLorentzVector J_b0;
+    J_b0.SetPxPyPzE(0.0,0.0,-jpsimom,sqrt(m2Jpsi+jpsimom*jpsimom));
+    TLorentzVector Kstar_b0;
+    Kstar_b0.SetPxPyPzE(0.0,0.0,jpsimom,sqrt(m2kpi+jpsimom*jpsimom));
+    
+    // boosting K* to Jpsi rest frame
+    TLorentzVector Kstar_jpsi = Kstar_b0;
+    Kstar_jpsi.Boost( -J_b0.BoostVector() );
+    
+    // boosting Jpsi to K* rest frame
+    TLorentzVector J_Kstar = J_b0;
+    J_Kstar.Boost( -Kstar_b0.BoostVector() );
+    
+    // boosting Pi in K* rest frame to Jpsi rest frame
+    TLorentzVector Pi_jpsi = Pi;
+    Pi_jpsi.Boost( -J_Kstar.BoostVector() );
+    
+    // Muon 4 momenta in Jpsi rest frame
+    double mumom = dec2mm(jpsi_mass,muon_mass,muon_mass);
+    TLorentzVector muP;
+    double pmuPx = mumom*sin(theta)*cos(phi);
+    double pmuPy = -mumom*sin(theta)*sin(phi);
+    double pmuPz = -mumom*cos(theta);
+    double EmuP = sqrt(muon_mass*muon_mass+mumom*mumom);
+    muP.SetPxPyPzE(pmuPx,pmuPy,pmuPz,EmuP);
+    
+    
+    /*
+     double scale1 = ((Kstar_jpsi.Vect()).Dot(muP.Vect()))/(muP.Vect().Mag2());
+     TVector3 aKstar = Kstar_jpsi.Vect() - scale1*muP.Vect();
+     
+     double scale2 = ((Pi_jpsi.Vect()).Dot(muP.Vect()))/(muP.Vect().Mag2());
+     TVector3 aPi = Pi_jpsi.Vect() - scale2*muP.Vect();
+     
+     double cosalpha = (aPi.Dot(aKstar))/((aPi.Mag())*(aKstar.Mag()));
+     
+     return acos(cosalpha);
+     */
+    
+    TVector3	MuPPiPlane	=	muP.Vect().Cross(Pi_jpsi.Vect()); //muP.Vect().Cross(Pi_jpsi.Vect());
+    TVector3	MuPKstPlane		=	muP.Vect().Cross(Kstar_jpsi.Vect()); //muP.Vect().Cross(Kstar_jpsi.Vect());
+    double alph;
+    if	(	MuPPiPlane.Cross(MuPKstPlane).Dot(-J_b0.Vect())	>	0.0	)
+        alph	=	MuPPiPlane.Angle(MuPKstPlane);
+        else
+            alph	=	-MuPPiPlane.Angle(MuPKstPlane);
+            
+            return alph;
+    
+    
+}
+//================ Alpha =============================
+
+
+
+//================ Theta tilde =======================
+double MC_Analysis_Zangles::costhetatilde(double theta, double phi, double m2kpi, double m2jpsipi) const
+{
+    // K momentum in B0 frame
+    double pk_B0 = dec2mm(B0_mass,sqrt(m2jpsipi),kaonCh_mass);
+    TLorentzVector K_B0;
+    K_B0.SetPxPyPzE(0.0,0.0,pk_B0,sqrt(m2K+pk_B0*pk_B0));
+    
+    TLorentzVector Zc_B0;
+    Zc_B0.SetPxPyPzE(0.0,0.0,-pk_B0,sqrt(m2jpsipi+pk_B0*pk_B0));
+    
+    // Boost K to Zc rest frame
+    TLorentzVector K_Zc_old = K_B0;
+    K_Zc_old.Boost( -Zc_B0.BoostVector() );
+    
+    // 4 momenta in Zc rest frame (with a different coordinate system)
+    double thetaz = acos(  costhetaHel(m2B,m2jpsipi,m2Jpsi,m2Pi,m2K,m2kpi)  );
+    double pk = K_Zc_old.Pz();
+    double Ek = sqrt(m2K+pk*pk);
+    TLorentzVector K_Zc;
+    K_Zc.SetPxPyPzE(pk*sin(thetaz),0.0,pk*cos(thetaz),Ek);
+    
+    double ppi = dec2mm(sqrt(m2jpsipi),jpsi_mass,pionCh_mass);
+    
+    double Epi = sqrt(m2Pi+ppi*ppi);
+    TLorentzVector Pi_Zc;
+    Pi_Zc.SetPxPyPzE(0.0,0.0,ppi,Epi);
+    
+    double Epsi = sqrt(m2Jpsi+ppi*ppi);
+    TLorentzVector Jpsi_Zc;
+    Jpsi_Zc.SetPxPyPzE(0.0,0.0,-ppi,Epsi);
+    
+    // Boost everything to Jpsi frame
+    TLorentzVector K_jpsi = K_Zc;
+    K_jpsi.Boost( -Jpsi_Zc.BoostVector() );
+    
+    TLorentzVector Pi_jpsi = Pi_Zc;
+    Pi_jpsi.Boost( -Jpsi_Zc.BoostVector() );
+    
+    // Muon momenta in Jpsi rest frame
+    double pmu = dec2mm(m2Jpsi,muon_mass,muon_mass);
+    double Emu = sqrt(muon_mass*muon_mass + pmu*pmu);
+    
+    double denom = sqrt( (0.25*pow((m2B-m2kpi+m2Jpsi),2)-m2B*m2Jpsi)*(0.25*m2Jpsi*m2Jpsi-muon_mass*muon_mass*m2Jpsi) );
+    double m2kpimu = 0.5*( m2B+m2kpi+2.0*muon_mass*muon_mass-m2Jpsi-4.0*cos(theta)*denom/m2Jpsi );
+    
+    double Ek_jpsi = K_jpsi.E();
+    double pkx = K_jpsi.Px();
+    double pkz = K_jpsi.Pz();
+    
+    double Epi_jpsi = Pi_jpsi.E();
+    double ppiz = Pi_jpsi.Pz();
+    
+    double a = pow((Ek_jpsi+Emu+Epi_jpsi),2) - m2kpimu - (pkx*pkx + pkz*pkz +2.0*pkz*ppiz + pmu*pmu + ppiz*ppiz );
+    double b = 2.0*pmu*(pkz+ppiz);
+    double c = 2.0*pkx*pmu*cos(phi);
+
+    if ( (b*b+c*c-a*a)>=0.0 ) {
+       return ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
+    }
+    else {return 10.0;}
+ 
+}
+//================ Theta tilde =======================
+
+
+//================ phi tilde =======================
+double MC_Analysis_Zangles::phitilde(double theta, double phi, double m2kpi, double m2jpsipi) const
+{
+    // K momentum in B0 frame
+    double pk_B0 = dec2mm(B0_mass,sqrt(m2jpsipi),kaonCh_mass);
+    TLorentzVector K_B0;
+    K_B0.SetPxPyPzE(0.0,0.0,pk_B0,sqrt(m2K+pk_B0*pk_B0));
+    
+    TLorentzVector Zc_B0;
+    Zc_B0.SetPxPyPzE(0.0,0.0,-pk_B0,sqrt(m2jpsipi+pk_B0*pk_B0));
+    
+    // Boost K to Zc rest frame
+    TLorentzVector K_Zc_old = K_B0;
+    K_Zc_old.Boost( -Zc_B0.BoostVector() );
+    
+    // 4 momenta in Zc rest frame (with a different coordinate system)
+    double thetaz = acos(  costhetaHel(m2B,m2jpsipi,m2Jpsi,m2Pi,m2K,m2kpi)  );
+    double pk = K_Zc_old.Pz();
+    double Ek = sqrt(m2K+pk*pk);
+    TLorentzVector K_Zc;
+    K_Zc.SetPxPyPzE(pk*sin(thetaz),0.0,pk*cos(thetaz),Ek);
+    
+    double ppi = dec2mm(sqrt(m2jpsipi),jpsi_mass,pionCh_mass);
+    
+    double Epi = sqrt(m2Pi+ppi*ppi);
+    TLorentzVector Pi_Zc;
+    Pi_Zc.SetPxPyPzE(0.0,0.0,ppi,Epi);
+    
+    double Epsi = sqrt(m2Jpsi+ppi*ppi);
+    TLorentzVector Jpsi_Zc;
+    Jpsi_Zc.SetPxPyPzE(0.0,0.0,-ppi,Epsi);
+    
+    // Boost everything to Jpsi frame
+    TLorentzVector K_jpsi = K_Zc;
+    K_jpsi.Boost( -Jpsi_Zc.BoostVector() );
+    
+    TLorentzVector Pi_jpsi = Pi_Zc;
+    Pi_jpsi.Boost( -Jpsi_Zc.BoostVector() );
+    
+    // Muon momenta in Jpsi rest frame
+    double pmu = dec2mm(m2Jpsi,muon_mass,muon_mass);
+    double Emu = sqrt(muon_mass*muon_mass + pmu*pmu);
+    
+    double denom = sqrt( (0.25*pow((m2B-m2kpi+m2Jpsi),2)-m2B*m2Jpsi)*(0.25*m2Jpsi*m2Jpsi-muon_mass*muon_mass*m2Jpsi) );
+    double m2kpimu = 0.5*( m2B+m2kpi+2.0*muon_mass*muon_mass-m2Jpsi-4.0*cos(theta)*denom/m2Jpsi );
+    
+    double Ek_jpsi = K_jpsi.E();
+    double pkx = K_jpsi.Px();
+    double pkz = K_jpsi.Pz();
+    
+    double Epi_jpsi = Pi_jpsi.E();
+    double ppiz = Pi_jpsi.Pz();
+    
+    double a = pow((Ek_jpsi+Emu+Epi_jpsi),2) - m2kpimu - (pkx*pkx + pkz*pkz +2.0*pkz*ppiz + pmu*pmu + ppiz*ppiz );
+    double b = 2.0*pmu*(pkz+ppiz);
+    double c = 2.0*pkx*pmu*cos(phi);
+    
+    if ( (b*b+c*c-a*a)>=0.0 ) { // discriminant check
+        double costhtilde = ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
+        double sinthtilde = ( a*c*c - b * sqrt(c*c*(b*b+c*c-a*a)) )/(b*b*b+c*c*c);
+        
+        TLorentzVector muP;
+        muP.SetPxPyPzE( pmu*sinthtilde*cos(phi), -pmu*sinthtilde*sin(phi), -pmu*costhtilde, Emu );
+        
+        TVector3	MuPPiPlane	=	muP.Vect().Cross(Pi_jpsi.Vect());
+        TVector3	KPiPlane	=	K_jpsi.Vect().Cross(Pi_jpsi.Vect());
+        double phtld;
+        if	(	MuPPiPlane.Cross(KPiPlane).Dot(Pi_jpsi.Vect())	>	0.0	)
+            phtld	=	MuPPiPlane.Angle(KPiPlane);
+        else
+            phtld	=	-MuPPiPlane.Angle(KPiPlane);
+        
+        return phtld;
+        
+    } // discriminant check
+    else {return 10.0;}
+}
+//================ phi tilde =======================
+
+
 
 
 // functions calculating angles
