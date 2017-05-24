@@ -735,7 +735,9 @@ class Data_Analysis_Zangles : public TSelector {
     
     TH1F* h_alpha_sel_nB01;
     TH1F* h_cos_theta_Z_sel_nB01;
+    
     TH1F* h_cos_thetatilde_sel_nB01;
+    TH1F* h_cos_thetatilde_sel_nB01_alt;
     
     TH1F* h_phitilde_sel_nB01;
     
