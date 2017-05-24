@@ -361,6 +361,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
             
             // Direct calculation of costheta tilde
             
+            /*
             // Get momentum of Z in B rest frame
             TVector3 ZInBFrame;
             GetMomentumInMotherFrame(B0p4,Zcandp4,beam_energy, ZInBFrame);
@@ -392,6 +393,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
             MuInJpsiFrameTLVec.SetPtEtaPhiM(MuInJpsiFrame.Perp() , MuInJpsiFrame.Eta(),  MuInJpsiFrame.Phi() , muon_mass);
             
             thetaTilde = MuInJpsiFrame.Angle(JpsiInZFrame);
+            */
             
             
             Bool_t newsoftID = false;
@@ -510,7 +512,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
                 h_phi_planes_sel_nB01->Fill(phi);
                 h_alpha_sel_nB01->Fill(alpha_angle);
                 h_cos_thetatilde_sel_nB01->Fill(costheta_tilde);
-                h_cos_thetatilde_sel_nB01_alt->Fill(TMath::Cos(thetaTilde));
+//                h_cos_thetatilde_sel_nB01_alt->Fill(TMath::Cos(thetaTilde));
                 h_phitilde_sel_nB01->Fill(phi_tilde);
                 
             } // Dalitz peak
