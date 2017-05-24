@@ -101,10 +101,9 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     
     h_cos_theta_Z       = new TH1F("h_cos_theta_Z","Cosine of Z helicity angle ;cos(#theta_{Z})", 102, -1.02, 1.02);
     h_cos_theta_Z_sel   = new TH1F("h_cos_theta_Z_sel","Cosine of Z helicity angle after selection;cos(#theta_{Z})", 102, -1.02, 1.02);
-    h_cos_theta_Z_sel_alt   = new TH1F("h_cos_theta_Z_sel_alt","Cosine of Z helicity angle after selection direct;cos(#theta_{Z})", 102, -1.02, 1.02);
     
     h_cos_thetatilde       = new TH1F("h_cos_thetatilde","Cosine of J/#psi helicity angle ;cos(#tilde{#theta})", 102, -1.02, 1.02);
-//    h_cos_thetatilde_sel   = new TH1F("h_cos_thetatilde_sel","Cosine of J/#psi helicity angle after selection;cos(#tilde{#theta})", 102, -1.02, 1.02);
+    h_cos_thetatilde_sel   = new TH1F("h_cos_thetatilde_sel","Cosine of J/#psi helicity angle after selection;cos(#tilde{#theta})", 102, -1.02, 1.02);
     
     
     h_phi_planes            = new TH1F("h_phi_planes","Angle between K#pi and #mu#mu planes;#phi(J/#psi,K*)", 160, -3.2, 3.2) ;
@@ -363,29 +362,31 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
             
             // Get momentum of Z in B rest frame
             TVector3 ZInBFrame;
-            GetMomentumInMotherFrame(B0p4,Zcandp4,BeamEnergy, ZInBFrame);
+            GetMomentumInMotherFrame(B0p4,Zcandp4,beam_energy, ZInBFrame);
             TLorentzVector ZInBFrameTLVec;
             ZInBFrameTLVec.SetPtEtaPhiM(ZInBFrame.Perp() , ZInBFrame.Eta(),  ZInBFrame.Phi() , 4.485);
             
             // Get Momentum of Jpsi in Z rest frame
             TVector3 JpsiInBFrame;
-            GetMomentumInMotherFrame(B0p4,jpsip4,BeamEnergy, JpsiInBFrame); // B boost
+            GetMomentumInMotherFrame(B0p4,jpsip4,beam_energy, JpsiInBFrame); // B boost
             TLorentzVector JpsiInBFrameTLVec;
             JpsiInBFrameTLVec.SetPtEtaPhiM(JpsiInBFrame.Perp() , JpsiInBFrame.Eta(),  JpsiInBFrame.Phi() , jpsi_mass);
             TVector3 JpsiInZFrame;
-            GetMomentumInMotherFrame(ZInBFrameTLVec,JpsiInBFrameTLVec,BeamEnergy, JpsiInZFrame);
+            GetMomentumInMotherFrame(ZInBFrameTLVec,JpsiInBFrameTLVec,beam_energy, JpsiInZFrame);
+            TLorentzVector JpsiInZFrameTLVec;
+            JpsiInZFrameTLVec.SetPtEtaPhiM(JpsiInZFrame.Perp() , JpsiInZFrame.Eta(),  JpsiInZFrame.Phi() , jpsi_mass);
             
             // Get Momentum of Mu+ in Jpsi rest frame
             TVector3 MuInBFrame;
-            GetMomentumInMotherFrame(B0p4,muP_p4,BeamEnergy, MuInBFrame); // B boost
+            GetMomentumInMotherFrame(B0p4,muP_p4,beam_energy, MuInBFrame); // B boost
             TLorentzVector MuInBFrameTLVec;
             MuInBFrameTLVec.SetPtEtaPhiM(MuInBFrame.Perp() , MuInBFrame.Eta(),  MuInBFrame.Phi() , muon_mass);
             TVector3 MuInZFrame;
-            GetMomentumInMotherFrame(ZInBFrameTLVec,MuInBFrameTLVec,BeamEnergy, MuInZFrame);
+            GetMomentumInMotherFrame(ZInBFrameTLVec,MuInBFrameTLVec,beam_energy, MuInZFrame);
             TLorentzVector MuInZFrameTLVec;
             MuInZFrameTLVec.SetPtEtaPhiM(MuInZFrame.Perp() , MuInZFrame.Eta(),  MuInZFrame.Phi() , muon_mass);
             TVector3 MuInJpsiFrame;
-            GetMomentumInMotherFrame(JpsiInZFrameTLVec,MuInZFrameTLVec,BeamEnergy, MuInJpsiFrame);
+            GetMomentumInMotherFrame(JpsiInZFrameTLVec,MuInZFrameTLVec,beam_energy, MuInJpsiFrame);
             TLorentzVector MuInJpsiFrameTLVec;
             MuInJpsiFrameTLVec.SetPtEtaPhiM(MuInJpsiFrame.Perp() , MuInJpsiFrame.Eta(),  MuInJpsiFrame.Phi() , muon_mass);
             
