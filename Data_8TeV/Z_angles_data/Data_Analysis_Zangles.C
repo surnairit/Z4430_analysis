@@ -184,6 +184,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
     double costheta_k=0;
     double alpha_angle = 0;
     double costheta_tilde = 0.0;
+    double thetaTilde = 0.0; // direct calculation
     double phi_tilde = 0.0;
     
     
@@ -390,7 +391,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
             TLorentzVector MuInJpsiFrameTLVec;
             MuInJpsiFrameTLVec.SetPtEtaPhiM(MuInJpsiFrame.Perp() , MuInJpsiFrame.Eta(),  MuInJpsiFrame.Phi() , muon_mass);
             
-            float thetaTilde = MuInJpsiFrame.Angle(JpsiInZFrame);
+            thetaTilde = MuInJpsiFrame.Angle(JpsiInZFrame);
             
             
             Bool_t newsoftID = false;
