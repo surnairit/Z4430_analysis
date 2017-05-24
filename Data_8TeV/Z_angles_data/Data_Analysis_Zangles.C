@@ -103,7 +103,7 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     h_cos_theta_Z_sel   = new TH1F("h_cos_theta_Z_sel","Cosine of Z helicity angle after selection;cos(#theta_{Z})", 102, -1.02, 1.02);
     
     h_cos_thetatilde       = new TH1F("h_cos_thetatilde","Cosine of J/#psi helicity angle ;cos(#tilde{#theta})", 102, -1.02, 1.02);
-    h_cos_thetatilde_sel   = new TH1F("h_cos_thetatilde_sel","Cosine of J/#psi helicity angle after selection;cos(#tilde{#theta})", 102, -1.02, 1.02);
+//    h_cos_thetatilde_sel   = new TH1F("h_cos_thetatilde_sel","Cosine of J/#psi helicity angle after selection;cos(#tilde{#theta})", 102, -1.02, 1.02);
     
     
     h_phi_planes            = new TH1F("h_phi_planes","Angle between K#pi and #mu#mu planes;#phi(J/#psi,K*)", 160, -3.2, 3.2) ;
@@ -125,7 +125,7 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     
     h_cos_theta_Z_sel_nB01   = new TH1F("h_cos_theta_Z_sel_nB01","Cosine of Z helicity angle after selection nB0=1;cos(#theta_{Z})", 102, -1.02, 1.02);
     h_cos_thetatilde_sel_nB01   = new TH1F("h_cos_thetatilde_sel_nB01","Cosine of J/#psi helicity angle after selection nB0=1;cos(#tilde{#theta})", 102, -1.02, 1.02);
-    h_cos_thetatilde_sel_nB01_alt   = new TH1F("h_cos_thetatilde_sel_nB01_alt","Cosine of J/#psi helicity angle after selection nB0=1 direct;cos(#tilde{#theta})", 102, -1.02, 1.02);
+//    h_cos_thetatilde_sel_nB01_alt   = new TH1F("h_cos_thetatilde_sel_nB01_alt","Cosine of J/#psi helicity angle after selection nB0=1 direct;cos(#tilde{#theta})", 102, -1.02, 1.02);
 
     
     h_phi_planes_sel_nB01        = new TH1F("h_phi_planes_sel_nB01","Angle between K#pi and #mu#mu planes after selection nB0=1;#phi(J/#psi,K*)", 160, -3.2, 3.2) ;
@@ -184,7 +184,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
     double costheta_k=0;
     double alpha_angle = 0;
     double costheta_tilde = 0.0;
-    double thetaTilde = 0.0; // direct calculation
+//    double thetaTilde = 0.0; // direct calculation
     double phi_tilde = 0.0;
     
     
@@ -295,7 +295,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
             B0p4 = jpsip4+pip4+kp4;
             Bsp4_JpsiKK = jpsip4+kp4+pip4_exchanged;
             JpsiPiPip4 = jpsip4+pip4+kp4_exchanged;
-            Zcandp4 = jpsip4+pip4;
+//            Zcandp4 = jpsip4+pip4;
             
             
             //  Float_t
@@ -578,7 +578,7 @@ void Data_Analysis_Zangles::SlaveTerminate()
         
         h_cos_theta_Z_sel_nB01->Write();
         h_cos_thetatilde_sel_nB01->Write();
-        h_cos_thetatilde_sel_nB01_alt->Write();
+//        h_cos_thetatilde_sel_nB01_alt->Write();
         
         h_phitilde_sel_nB01->Write();
         
