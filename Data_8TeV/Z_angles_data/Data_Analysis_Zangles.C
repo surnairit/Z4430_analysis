@@ -103,7 +103,7 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     h_cos_theta_Z_sel   = new TH1F("h_cos_theta_Z_sel","Cosine of Z helicity angle after selection;cos(#theta_{Z})", 102, -1.02, 1.02);
     
     h_cos_thetatilde       = new TH1F("h_cos_thetatilde","Cosine of J/#psi helicity angle ;cos(#tilde{#theta})", 102, -1.02, 1.02);
-//    h_cos_thetatilde_sel   = new TH1F("h_cos_thetatilde_sel","Cosine of J/#psi helicity angle after selection;cos(#tilde{#theta})", 102, -1.02, 1.02);
+    h_cos_thetatilde_sel   = new TH1F("h_cos_thetatilde_sel","Cosine of J/#psi helicity angle after selection;cos(#tilde{#theta})", 102, -1.02, 1.02);
     
     
     h_phi_planes            = new TH1F("h_phi_planes","Angle between K#pi and #mu#mu planes;#phi(J/#psi,K*)", 160, -3.2, 3.2) ;
@@ -111,7 +111,8 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     
     h_alpha            = new TH1F("h_alpha","Angle between #mu+#pi and #mu+K* planes;#alpha", 160, -3.2, 3.2) ;
     h_alpha_sel        = new TH1F("h_alpha_sel","Angle between #mu+#pi and #mu+K* planes planes after selection;#alpha", 160, -3.2, 3.2) ;
-    
+   
+    h_phitilde        = new TH1F("h_phitilde","Angle between #mu+#pi and K#pi planes;#tilde{#phi}", 160, -3.2, 3.2) ; 
     h_phitilde_sel        = new TH1F("h_phitilde_sel","Angle between #mu+#pi and K#pi planes after selection;#tilde{#phi}", 160, -3.2, 3.2) ;
     
     
@@ -125,7 +126,7 @@ void Data_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     
     h_cos_theta_Z_sel_nB01   = new TH1F("h_cos_theta_Z_sel_nB01","Cosine of Z helicity angle after selection nB0=1;cos(#theta_{Z})", 102, -1.02, 1.02);
     h_cos_thetatilde_sel_nB01   = new TH1F("h_cos_thetatilde_sel_nB01","Cosine of J/#psi helicity angle after selection nB0=1;cos(#tilde{#theta})", 102, -1.02, 1.02);
-//    h_cos_thetatilde_sel_nB01_alt   = new TH1F("h_cos_thetatilde_sel_nB01_alt","Cosine of J/#psi helicity angle after selection nB0=1 direct;cos(#tilde{#theta})", 102, -1.02, 1.02);
+    h_cos_thetatilde_sel_nB01_alt   = new TH1F("h_cos_thetatilde_sel_nB01_alt","Cosine of J/#psi helicity angle after selection nB0=1 direct;cos(#tilde{#theta})", 102, -1.02, 1.02);
 
     
     h_phi_planes_sel_nB01        = new TH1F("h_phi_planes_sel_nB01","Angle between K#pi and #mu#mu planes after selection nB0=1;#phi(J/#psi,K*)", 160, -3.2, 3.2) ;
@@ -171,7 +172,8 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
     
     h_nB0->Fill(nB0);
     int numB0 = 0;
-    
+
+   
     Float_t B0MassAlt=0;
     double JpsiPiMass=0;
     double KPiMass=0;
@@ -184,7 +186,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
     double costheta_k=0;
     double alpha_angle = 0;
     double costheta_tilde = 0.0;
-//    double thetaTilde = 0.0; // direct calculation
+    double thetaTilde = 0.0; // direct calculation
     double phi_tilde = 0.0;
     
     
@@ -206,7 +208,8 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
     TLorentzVector Zcandp4;
     
     double m2kpi = 0.0;
-    
+
+   
     
     
     if ( nB0>0 ) { //b0 requirement
@@ -215,6 +218,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
         for (Int_t myB0Idx = 0; myB0Idx < abs(nB0); myB0Idx++)
             
         {  // b0 loop
+
             Int_t pi_orig_Index = (*B0PionIdx)[myB0Idx] ;
             Int_t ka_orig_Index = (*B0KaonIdx)[myB0Idx] ;
             Int_t jpsi_index = (*B0MuMuIdx)[myB0Idx];
@@ -295,7 +299,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
             B0p4 = jpsip4+pip4+kp4;
             Bsp4_JpsiKK = jpsip4+kp4+pip4_exchanged;
             JpsiPiPip4 = jpsip4+pip4+kp4_exchanged;
-//            Zcandp4 = jpsip4+pip4;
+            Zcandp4 = jpsip4+pip4;
             
             
             //  Float_t
@@ -361,7 +365,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
             
             // Direct calculation of costheta tilde
             
-            /*
+            
             // Get momentum of Z in B rest frame
             TVector3 ZInBFrame;
             GetMomentumInMotherFrame(B0p4,Zcandp4,beam_energy, ZInBFrame);
@@ -393,7 +397,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
             MuInJpsiFrameTLVec.SetPtEtaPhiM(MuInJpsiFrame.Perp() , MuInJpsiFrame.Eta(),  MuInJpsiFrame.Phi() , muon_mass);
             
             thetaTilde = MuInJpsiFrame.Angle(JpsiInZFrame);
-            */
+            
             
             
             Bool_t newsoftID = false;
@@ -487,11 +491,11 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
                 
             } //check
             
-            
+           
             
             
         } // b0 loop
-        
+       
         if (numB0 == 1) { // only 1 B0 after cuts
             
             hjpsiKPiMassSelAltZoom_nB01->Fill(B0MassAlt);
@@ -512,7 +516,7 @@ Bool_t Data_Analysis_Zangles::Process(Long64_t entry)
                 h_phi_planes_sel_nB01->Fill(phi);
                 h_alpha_sel_nB01->Fill(alpha_angle);
                 h_cos_thetatilde_sel_nB01->Fill(costheta_tilde);
-//                h_cos_thetatilde_sel_nB01_alt->Fill(TMath::Cos(thetaTilde));
+                h_cos_thetatilde_sel_nB01_alt->Fill(TMath::Cos(thetaTilde));
                 h_phitilde_sel_nB01->Fill(phi_tilde);
                 
             } // Dalitz peak
@@ -578,7 +582,7 @@ void Data_Analysis_Zangles::SlaveTerminate()
         
         h_cos_theta_Z_sel_nB01->Write();
         h_cos_thetatilde_sel_nB01->Write();
-//        h_cos_thetatilde_sel_nB01_alt->Write();
+        h_cos_thetatilde_sel_nB01_alt->Write();
         
         h_phitilde_sel_nB01->Write();
         
