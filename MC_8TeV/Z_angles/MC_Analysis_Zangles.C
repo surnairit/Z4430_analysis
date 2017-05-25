@@ -72,7 +72,7 @@ void MC_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     
     TString option = GetOption();
     
-        OutFile = new TProofOutputFile( "Bkg_B0ToPsiMuMu_0004.root" );
+    OutFile = new TProofOutputFile( "Bkg_B0ToPsiMuMu_0004.root" );
     //    OutFile = new TProofOutputFile( "Bkg_BsToPsiMuMu_0001.root" );
     //   OutFile = new TProofOutputFile( "Bkg_BpToPsiMuMu_0000.root" );
     //  OutFile = new TProofOutputFile( "Bkg_LambdaBToPsiMuMu.root" );
@@ -89,13 +89,13 @@ void MC_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     h_nB0                   = new TH1F("h_nB0","h_nB0",10,0,10);
     hMuMuMass               = new TH1F("hMuMuMass","hMuMuMass",140,2.6,4.0);
     
-
+    
     hJpsiPiMass             = new TH1F("hJpsiPiMass","hJpsiPiMass",1000,0,10);
     hKPiMass                = new TH1F("hKPiMass","hKPiMass",1000,0,10);
     
     hJpsiPiMass_peak        = new TH1F("hJpsiPiMass_peak","hJpsiPiMass_peak",1000,0,10);
     hKPiMass_peak           = new TH1F("hKPiMass_peak","hKPiMass_peak",1000,0,10);
- 
+    
     hJpsiPiMass_sb          = new TH1F("hJpsiPiMass_sb","hJpsiPiMass_sb",1000,0,10);
     hKPiMass_sb             = new TH1F("hKPiMass_sb","hKPiMass_sb",1000,0,10);
     
@@ -106,13 +106,14 @@ void MC_Analysis_Zangles::SlaveBegin(TTree * /*tree*/)
     h_cos_theta_Kstar       = new TH1F("h_cos_theta_Kstar","Cosine of K* helicity angle ;cos(#theta_{K*})", 102, -1.02, 1.02);
     h_cos_theta_Z           = new TH1F("h_cos_theta_Z","Cosine of Z helicity angle ;cos(#theta_{Z})", 102, -1.02, 1.02);
     h_phi_planes            = new TH1F("h_phi_planes","Angle between K#pi and #mu#mu planes;#phi(J/#psi,K*)", 160, -3.2, 3.2) ;
-
+    
     h_cos_thetatilde       = new TH1F("h_cos_thetatilde","Cosine of J/#psi helicity angle ;cos(#tilde{#theta})", 102, -1.02, 1.02);
+    h_cos_thetatilde_alt       = new TH1F("h_cos_thetatilde_alt","Cosine of J/#psi helicity angle direct ;cos(#tilde{#theta})", 102, -1.02, 1.02);
     h_phitilde            = new TH1F("h_phitilde","Angle between #mu+#pi and K#pi planes;#tilde{#phi}", 160, -3.2, 3.2) ;
     h_alpha            = new TH1F("h_alpha","Angle between #mu+#pi and #mu+K* planes;#alpha", 160, -3.2, 3.2) ;
-
-
-
+    
+    
+    
 }
 
 Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
@@ -158,6 +159,7 @@ Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
     double costheta_k=0;
     double alpha_angle = 0;
     double costheta_tilde = 0.0;
+    double thetaTilde = 0.0; // direct calculation
     double phi_tilde = 0.0;
     
     
@@ -270,7 +272,7 @@ Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
             JpsiPiPip4 = jpsip4+pip4+kp4_exchanged;
             JpsiKProton_p4 = jpsip4+kp4+pip4_proton;
             JpsiPiProton_p4 = jpsip4+pip4+kp4_proton;
-            
+            Zcandp4 = jpsip4+pip4;
             
             
             //  Float_t
@@ -349,7 +351,7 @@ Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
                 ) // cuts loose
             {
                 baselineB0Sel = true;
-
+                
             } // cuts loose loop
             
             if ( 1 // cuts tight
@@ -415,13 +417,50 @@ Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
                 alpha_angle = alpha(theta_Jpsi,phi,m2KPi,m2JpsiPi);
                 costheta_tilde = costhetatilde(theta_Jpsi,phi,m2KPi,m2JpsiPi);
                 phi_tilde = phitilde(theta_Jpsi,phi,m2KPi,m2JpsiPi);
-
+                
+                
+                // Direct calculation of costheta tilde
+            
+                // Get momentum of Z in B rest frame
+                TVector3 ZInBFrame;
+                GetMomentumInMotherFrame(B0p4,Zcandp4,beam_energy, ZInBFrame);
+                TLorentzVector ZInBFrameTLVec;
+                ZInBFrameTLVec.SetPtEtaPhiM(ZInBFrame.Perp() , ZInBFrame.Eta(),  ZInBFrame.Phi() , 4.485);
+                
+                // Get Momentum of Jpsi in Z rest frame
+                TVector3 JpsiInBFrame;
+                GetMomentumInMotherFrame(B0p4,jpsip4,beam_energy, JpsiInBFrame); // B boost
+                TLorentzVector JpsiInBFrameTLVec;
+                JpsiInBFrameTLVec.SetPtEtaPhiM(JpsiInBFrame.Perp() , JpsiInBFrame.Eta(),  JpsiInBFrame.Phi() , jpsi_mass);
+                TVector3 JpsiInZFrame;
+                GetMomentumInMotherFrame(ZInBFrameTLVec,JpsiInBFrameTLVec,beam_energy, JpsiInZFrame);
+                TLorentzVector JpsiInZFrameTLVec;
+                JpsiInZFrameTLVec.SetPtEtaPhiM(JpsiInZFrame.Perp() , JpsiInZFrame.Eta(),  JpsiInZFrame.Phi() , jpsi_mass);
+                
+                // Get Momentum of Mu+ in Jpsi rest frame
+                TVector3 MuInBFrame;
+                GetMomentumInMotherFrame(B0p4,muP_p4,beam_energy, MuInBFrame); // B boost
+                TLorentzVector MuInBFrameTLVec;
+                MuInBFrameTLVec.SetPtEtaPhiM(MuInBFrame.Perp() , MuInBFrame.Eta(),  MuInBFrame.Phi() , muon_mass);
+                TVector3 MuInZFrame;
+                GetMomentumInMotherFrame(ZInBFrameTLVec,MuInBFrameTLVec,beam_energy, MuInZFrame);
+                TLorentzVector MuInZFrameTLVec;
+                MuInZFrameTLVec.SetPtEtaPhiM(MuInZFrame.Perp() , MuInZFrame.Eta(),  MuInZFrame.Phi() , muon_mass);
+                TVector3 MuInJpsiFrame;
+                GetMomentumInMotherFrame(JpsiInZFrameTLVec,MuInZFrameTLVec,beam_energy, MuInJpsiFrame);
+                TLorentzVector MuInJpsiFrameTLVec;
+                MuInJpsiFrameTLVec.SetPtEtaPhiM(MuInJpsiFrame.Perp() , MuInJpsiFrame.Eta(),  MuInJpsiFrame.Phi() , muon_mass);
+                
+                thetaTilde = MuInJpsiFrame.Angle(JpsiInZFrame);
+                
+                
+                
                 
                 if (fabs(costhetaHel(m2B,m2KPi,m2K,m2Pi,m2Jpsi,m2JpsiPi))<1 ) {
                     double costheta_k = costhetaHel(m2B,m2KPi,m2K,m2Pi,m2Jpsi,m2JpsiPi);
                     h_cos_theta_Kstar->Fill(costheta_k);
                 }
-
+                
                 if (fabs(costhetaHel(m2B,m2JpsiPi,m2Jpsi,m2Pi,m2K,m2KPi))<1 ) {
                     double costheta_z = costhetaHel(m2B,m2JpsiPi,m2Jpsi,m2Pi,m2K,m2KPi);
                     h_cos_theta_Z->Fill(costheta_z);
@@ -430,9 +469,10 @@ Bool_t MC_Analysis_Zangles::Process(Long64_t entry)
                 h_phi_planes->Fill(phi);
                 h_alpha->Fill(alpha_angle);
                 h_cos_thetatilde->Fill(costheta_tilde);
+                h_cos_thetatilde_alt->Fill(TMath::Cos(thetaTilde));
                 h_phitilde->Fill(phi_tilde);
-
-               
+                
+                
             } // cuts tight loop
             
             
@@ -477,14 +517,15 @@ void MC_Analysis_Zangles::SlaveTerminate()
         h_phi_planes->Write();
         
         h_cos_thetatilde->Write();
+        h_cos_thetatilde_alt->Write();
         h_phitilde->Write();
         h_alpha->Write();
-
-
+        
+        
         
         
         OutFile->Print();
-        fOutput->Add(OutFile); 
+        fOutput->Add(OutFile);
         hMuMuMass->SetDirectory(0); // any hname
         //      hjpsiKPiMassSelAlt->SetDirectory(0) ;
         //      gDirectory = savedir;
@@ -536,7 +577,7 @@ double MC_Analysis_Zangles::costhetaHel(double m2Mom, double m2Dau, double m2GDa
     
     double costheta_helicity = num/denom;
     return costheta_helicity;
-
+    
 }
 //================ costheta_helicity ===========================
 
@@ -672,12 +713,12 @@ double MC_Analysis_Zangles::costhetatilde(double theta, double phi, double m2kpi
     double a = pow((Ek_jpsi+Emu+Epi_jpsi),2) - m2kpimu - (pkx*pkx + pkz*pkz +2.0*pkz*ppiz + pmu*pmu + ppiz*ppiz );
     double b = 2.0*pmu*(pkz+ppiz);
     double c = 2.0*pkx*pmu*cos(phi);
-
+    
     if ( (b*b+c*c-a*a)>=0.0 ) {
-       return ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
+        return ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
     }
     else {return 10.0;}
- 
+    
 }
 //================ Theta tilde =======================
 

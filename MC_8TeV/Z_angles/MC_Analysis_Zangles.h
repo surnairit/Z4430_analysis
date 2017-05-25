@@ -733,6 +733,8 @@ class MC_Analysis_Zangles : public TSelector {
     TH1F* h_alpha;
     
     TH1F* h_cos_thetatilde;
+    TH1F* h_cos_thetatilde_alt;
+    
     TH1F* h_phitilde;
     
 
