@@ -764,7 +764,7 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
     Pi_jpsi.Boost( -Jpsi_Zc.BoostVector() );
     
     // Muon momenta in Jpsi rest frame
-    double pmu = dec2mm(m2Jpsi,muon_mass,muon_mass);
+    double pmu = dec2mm(jpsi_mass,muon_mass,muon_mass);
     double Emu = sqrt(muon_mass*muon_mass + pmu*pmu);
     
     double denom = sqrt( (0.25*pow((m2B-m2kpi+m2Jpsi),2)-m2B*m2Jpsi)*(0.25*m2Jpsi*m2Jpsi-muon_mass*muon_mass*m2Jpsi) );
@@ -830,7 +830,7 @@ double Data_Analysis_Zangles::phitilde(double theta, double phi, double m2kpi, d
     Pi_jpsi.Boost( -Jpsi_Zc.BoostVector() );
     
     // Muon momenta in Jpsi rest frame
-    double pmu = dec2mm(m2Jpsi,muon_mass,muon_mass);
+    double pmu = dec2mm(jpsi_mass,muon_mass,muon_mass);
     double Emu = sqrt(muon_mass*muon_mass + pmu*pmu);
     
     double denom = sqrt( (0.25*pow((m2B-m2kpi+m2Jpsi),2)-m2B*m2Jpsi)*(0.25*m2Jpsi*m2Jpsi-muon_mass*muon_mass*m2Jpsi) );
