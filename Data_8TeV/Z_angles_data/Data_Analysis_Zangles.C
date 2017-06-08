@@ -734,7 +734,7 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
     
     TLorentzVector Zc_B0;
     Zc_B0.SetPxPyPzE(0.0,0.0,-pk_B0,sqrt(m2jpsipi+pk_B0*pk_B0));
-    
+
     // Boost K to Zc rest frame
     TLorentzVector K_Zc_old = K_B0;
     K_Zc_old.Boost( -Zc_B0.BoostVector() );
@@ -746,30 +746,30 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
     TLorentzVector K_Zc;
     K_Zc.SetPxPyPzE(pk*sin(thetaz),0.0,pk*cos(thetaz),Ek);
     
-    double ppi = dec2mm(sqrt(m2jpsipi),jpsi_mass,pionCh_mass);
+    double ppi = dec2mm(sqrt(m2jpsipi),jpsi_mass,pionCh_mass); // jpsi mass var name diff in Gen jp_mass
     
     double Epi = sqrt(m2Pi+ppi*ppi);
     TLorentzVector Pi_Zc;
     Pi_Zc.SetPxPyPzE(0.0,0.0,ppi,Epi);
-    
+
     double Epsi = sqrt(m2Jpsi+ppi*ppi);
     TLorentzVector Jpsi_Zc;
     Jpsi_Zc.SetPxPyPzE(0.0,0.0,-ppi,Epsi);
-    
+
     // Boost everything to Jpsi frame
     TLorentzVector K_jpsi = K_Zc;
     K_jpsi.Boost( -Jpsi_Zc.BoostVector() );
-    
+
     TLorentzVector Pi_jpsi = Pi_Zc;
     Pi_jpsi.Boost( -Jpsi_Zc.BoostVector() );
-    
+
     // Muon momenta in Jpsi rest frame
-    double pmu = dec2mm(jpsi_mass,muon_mass,muon_mass);
+    double pmu = dec2mm(jpsi_mass,muon_mass,muon_mass); // jpsi mass var name diff in Gen jp_mass
     double Emu = sqrt(muon_mass*muon_mass + pmu*pmu);
-    
+
     double denom = sqrt( (0.25*pow((m2B-m2kpi+m2Jpsi),2)-m2B*m2Jpsi)*(0.25*m2Jpsi*m2Jpsi-muon_mass*muon_mass*m2Jpsi) );
     double m2kpimu = 0.5*( m2B+m2kpi+2.0*muon_mass*muon_mass-m2Jpsi-4.0*cos(theta)*denom/m2Jpsi );
-    
+
     double Ek_jpsi = K_jpsi.E();
     double pkx = K_jpsi.Px();
     double pkz = K_jpsi.Pz();
@@ -780,12 +780,55 @@ double Data_Analysis_Zangles::costhetatilde(double theta, double phi, double m2k
     double a = pow((Ek_jpsi+Emu+Epi_jpsi),2) - m2kpimu - (pkx*pkx + pkz*pkz +2.0*pkz*ppiz + pmu*pmu + ppiz*ppiz );
     double b = 2.0*pmu*(pkz+ppiz);
     double c = 2.0*pkx*pmu*cos(phi);
+    double discr = c*c*(b*b+c*c-a*a);
+    
+    
+    TLorentzVector PKPi = K_jpsi + Pi_jpsi;
+    double kpi_angle = PKPi.Vect().Angle(Pi_jpsi.Vect());
+    
+    
+    if ( discr>=0.0 && fabs( TMath::Cos(theta) )<0.98 ) {
+    
+        double sinth1 = -(a*c*c-b*sqrt(discr))/(b*b*c+c*c*c);
+        double costh1 = ( a*b + sqrt(discr) )/(b*b+c*c);
+        double th1 = TMath::ACos(costh1);
+        
+        double sinth2 = -(a*c*c+b*sqrt(discr))/(b*b*c+c*c*c);
+        double costh2 = ( a*b - sqrt(discr) )/(b*b+c*c);
+        double th2 = TMath::ACos(costh2);
+        
+        double costh_big, costh_small;
+        
+        if (th1>th2) {
+            costh_big = costh1;
+            costh_small = costh2;
+        }
+        else {
+            costh_big = costh2;
+            costh_small = costh1;
+        }
 
-    if ( (b*b+c*c-a*a)>=0.0 ) {
-       return ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
+        /*
+        if ( fabs(phi)>=1.570796 ) {
+            return costh_small;
+        }
+        else {
+            return costh_big;
+        }
+        */
+        
+        if (sinth1 <=0.0) {return costh1; }
+        else {return costh2;}
     }
-    else {return 10.0;}
- 
+    else {
+        if (TMath::Cos(theta) >= 0.0 ){
+            return TMath::Cos(kpi_angle);
+        }
+        else {
+            return -TMath::Cos(kpi_angle);
+        }
+    }
+    
 }
 //================ Theta tilde =======================
 
@@ -812,7 +855,7 @@ double Data_Analysis_Zangles::phitilde(double theta, double phi, double m2kpi, d
     TLorentzVector K_Zc;
     K_Zc.SetPxPyPzE(pk*sin(thetaz),0.0,pk*cos(thetaz),Ek);
     
-    double ppi = dec2mm(sqrt(m2jpsipi),jpsi_mass,pionCh_mass);
+    double ppi = dec2mm(sqrt(m2jpsipi),jpsi_mass,pionCh_mass); // jpsi mass var name diff in Gen jp_mass
     
     double Epi = sqrt(m2Pi+ppi*ppi);
     TLorentzVector Pi_Zc;
@@ -830,26 +873,13 @@ double Data_Analysis_Zangles::phitilde(double theta, double phi, double m2kpi, d
     Pi_jpsi.Boost( -Jpsi_Zc.BoostVector() );
     
     // Muon momenta in Jpsi rest frame
-    double pmu = dec2mm(jpsi_mass,muon_mass,muon_mass);
+    double pmu = dec2mm(jpsi_mass,muon_mass,muon_mass); // jpsi mass var name diff in Gen jp_mass
     double Emu = sqrt(muon_mass*muon_mass + pmu*pmu);
     
-    double denom = sqrt( (0.25*pow((m2B-m2kpi+m2Jpsi),2)-m2B*m2Jpsi)*(0.25*m2Jpsi*m2Jpsi-muon_mass*muon_mass*m2Jpsi) );
-    double m2kpimu = 0.5*( m2B+m2kpi+2.0*muon_mass*muon_mass-m2Jpsi-4.0*cos(theta)*denom/m2Jpsi );
+    double costhtilde = costhetatilde(theta, phi, m2kpi, m2jpsipi);
     
-    double Ek_jpsi = K_jpsi.E();
-    double pkx = K_jpsi.Px();
-    double pkz = K_jpsi.Pz();
-    
-    double Epi_jpsi = Pi_jpsi.E();
-    double ppiz = Pi_jpsi.Pz();
-    
-    double a = pow((Ek_jpsi+Emu+Epi_jpsi),2) - m2kpimu - (pkx*pkx + pkz*pkz +2.0*pkz*ppiz + pmu*pmu + ppiz*ppiz );
-    double b = 2.0*pmu*(pkz+ppiz);
-    double c = 2.0*pkx*pmu*cos(phi);
-    
-    if ( (b*b+c*c-a*a)>=0.0 ) { // discriminant check
-        double costhtilde = ( a*b + sqrt(c*c*(b*b+c*c-a*a)) )/(b*b+c*c);
-        double sinthtilde = ( a*c*c - b * sqrt(c*c*(b*b+c*c-a*a)) )/(b*b*b+c*c*c);
+    if ( fabs(costhtilde)<=1.00 ) {
+        double sinthtilde = TMath::Sin(TMath::ACos(costhtilde));
         
         TLorentzVector muP;
         muP.SetPxPyPzE( pmu*sinthtilde*cos(phi), -pmu*sinthtilde*sin(phi), -pmu*costhtilde, Emu );
@@ -863,12 +893,11 @@ double Data_Analysis_Zangles::phitilde(double theta, double phi, double m2kpi, d
             phtld	=	-MuPPiPlane.Angle(KPiPlane);
         
         return phtld;
-        
-    } // discriminant check
+    }
     else {return 10.0;}
+    
 }
 //================ phi tilde =======================
-
 
 
 
