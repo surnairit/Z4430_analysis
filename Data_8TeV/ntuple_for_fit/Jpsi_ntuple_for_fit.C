@@ -374,7 +374,7 @@ Bool_t Jpsi_ntuple_for_fit::Process(Long64_t entry)
                     
                     var[0] = KPiMass;
                     var[1] = JpsiPiMass;
-                    var[2] = TMath::Cos(theta_Jpsi);
+                    var[2] = theta_Jpsi;
                     var[3] = phi;
                     var[4] = kaonCharge;
                     
