@@ -135,12 +135,15 @@ Bool_t Jpsi_ntuple_for_fit::Process(Long64_t entry)
     int numB0 = 0;
     
     Float_t B0MassAlt=0;
+    Float_t BsMassAlt=0;
     double JpsiPiMass=0;
     double KPiMass=0;
     double theta_Jpsi=0;
     double theta_Kstar=0;
     double phi=0;
     
+    Float_t kaonCharge=0;
+    Float_t pionCharge=0;
     
     double B0_Pt = 0;
     double pion_fromB0_Pt = 0;
@@ -234,12 +237,12 @@ Bool_t Jpsi_ntuple_for_fit::Process(Long64_t entry)
             
             //  TLorentzVector Pip4_orig, Kp4_orig;
             Pip4_orig.SetPxPyPzE( (*trackPx)[pi_orig_Index], (*trackPy)[pi_orig_Index], (*trackPz)[pi_orig_Index], (*trackEnergy)[pi_orig_Index]) ; // original
-            float pionCharge = (*trackCharge)[pi_orig_Index];
+            pionCharge = (*trackCharge)[pi_orig_Index];
             
             Float_t K_E = 0.;
             K_E = sqrt( pow((*trackPx)[ka_orig_Index], 2) + pow((*trackPy)[ka_orig_Index], 2) + pow((*trackPz)[ka_orig_Index], 2) + pow(kaonCh_mass, 2) ) ; // original
             Kp4_orig.SetPxPyPzE( (*trackPx)[ka_orig_Index], (*trackPy)[ka_orig_Index], (*trackPz)[ka_orig_Index], K_E) ; // original
-            float kaonCharge = (*trackCharge)[ka_orig_Index];
+            kaonCharge = (*trackCharge)[ka_orig_Index];
             
             
             pip4_exchanged.SetVectM(pip4.Vect(), kaonCh_mass) ;
@@ -254,7 +257,7 @@ Bool_t Jpsi_ntuple_for_fit::Process(Long64_t entry)
             
             //  Float_t
             B0MassAlt = (jpsip4+pip4+kp4).Mag() - jpsip4.M() + jpsi_mass;
-            Float_t BsMassAlt = (jpsip4+kp4+pip4_exchanged).Mag() - jpsip4.M() + jpsi_mass;
+            BsMassAlt = (jpsip4+kp4+pip4_exchanged).Mag() - jpsip4.M() + jpsi_mass;
             Float_t JpsiPiPiMass = (jpsip4+pip4+kp4_exchanged).Mag()- jpsip4.M() + jpsi_mass;
             
             B0_Pt = B0p4.Pt();
@@ -362,9 +365,9 @@ Bool_t Jpsi_ntuple_for_fit::Process(Long64_t entry)
         if (numB0 == 1) { // only 1 B0 after cuts
         
             if (  !( ((pip4_exchanged+kp4).Mag()> 1.01 &&  (pip4_exchanged+kp4).Mag()< 1.03) && (BsMassAlt>5.332 && BsMassAlt<5.40) ) ) { // no Bs signal
-                hjpsiKPiMassNoPhi_hard->Fill(B0MassAlt);
+                hjpsiKPiMassNoPhi->Fill(B0MassAlt);
                 if ( B0MassAlt>5.25 && B0MassAlt<5.31 ) { // B0 peak
-                    h_theta_Jpsi->Fill(theta_Jpsi);
+                    h_cos_theta_Jpsi->Fill(TMath::Cos(theta_Jpsi));
                     h_phi_planes->Fill(phi);
                     hKPiMass_noBs->Fill(KPiMass);
                     hjpsiPiMass->Fill(JpsiPiMass);
@@ -399,169 +402,16 @@ void Jpsi_ntuple_for_fit::SlaveTerminate()
         //// Write histograms in output file
         gStyle->SetOptStat(111111) ;
         
-        //        _nt->Write();
-        
-        h_nB0->Write();
-        h_nB0_sel->Write();
-        
-        h_theta_Jpsi->Write();
-        h_cos_theta_Jpsi->Write();
-        h_theta_Jpsi_sel->Write();
-        h_cos_theta_Jpsi_sel->Write();
-        
-        h_theta_Kstar->Write();
-        h_cos_theta_Kstar->Write();
-        h_theta_Kstar_sel->Write();
-        h_cos_theta_Kstar_sel->Write();
-        
-        h_phi_planes->Write();
-        h_phi_planes_sel->Write();
-        
-        h_theta_Jpsi_Trackpt4p3->Write();
-        h_theta_Kstar_Trackpt4p3->Write();
-        h_phi_planes_Trackpt4p3->Write();
-        
-        // nB0 = 1 variables
-        h_theta_Jpsi_sel_nB01->Write();
-        h_cos_theta_Jpsi_sel_nB01->Write();
-        h_theta_Kstar_sel_nB01->Write();
-        h_cos_theta_Kstar_sel_nB01->Write();
-        h_phi_planes_sel_nB01->Write();
-        
-        hjpsiKPiMassSelAltZoom_nB01->Write();
-        hjpsiKPiMass_noKstar_nB01->Write();
-        
-        hjpsiKPiMassSelAltZoomB0pt18_nB0eq1->Write();
-        hjpsiKPiMassSelAltZoomTrackpt4p3_nB0eq1->Write();
-        hjpsiKPiMassSelAltZoomB0pt18Trackpt4p3_nB0eq1->Write();
-        
-        hjpsiKPiMassSelAltZoomTrackpt2p5_nB0eq1->Write();
-        hjpsiKPiMassSelAltZoomB0pt18Trackpt2p5_nB0eq1->Write();
-        
-        hjpsiPiMass_nB01->Write();
-        hjpsiPiMass_noKstar_nB01->Write();
-        hjpsiPiMass2_nB01->Write();
-        hjpsiPiMass2_noKstar_nB01->Write();
-        hjpsiPiMass2_nB01_case1->Write();
-        hjpsiPiMass2_nB01_case2->Write();
-        hjpsiPiMass2_nB01_case3->Write();
-        hjpsiPiMass2_nB01_case4->Write();
-        
-        hDalitz_peak_nB01_bin1->Write();
-        hDalitz_sideband_nB01_bin1->Write();
-        hDalitz_peak_nB01_bin2->Write();
-        hDalitz_sideband_nB01_bin2->Write();
-        hDalitz_peak_nB01_bin3->Write();
-        hDalitz_sideband_nB01_bin3->Write();
-        hDalitz_peak_nB01_bin4->Write();
-        hDalitz_sideband_nB01_bin4->Write();
-        
-        hDalitzProj_m2KPi_nB01_peak->Write();
-        hDalitzProj_m2JpsiPi_nB01_peak->Write();
-        hDalitzProj_m2KPi_nB01_sideband->Write();
-        hDalitzProj_m2JpsiPi_nB01_sideband->Write();
-        // nB0 = 1 variables
+        _nt->Write();
         
         hMuMuMass->Write();
         
-        hKPiMassB0->Write();
+        h_cos_theta_Jpsi->Write();
+        h_phi_planes->Write();
+        
         hKPiMass_noBs->Write();
-        hKKMassB0->Write();
-        hKKMass_control->Write();
-        hPiPiMassB0->Write();
-        hPiPiMassB0_noVertexCut->Write();
-        hPiPiMassPsi2S->Write();
-        hJpsiKKMass->Write();
-        hJpsiKKMass_control->Write();
-        hJpsiPiPiMass->Write();
-        hJpsiPhiToKKMass->Write();
-        hJpsif1525ToKKMass->Write();
-        
-        hJpsiKPi_JpsiKK->Write();
-        
-        hjpsiKPiMassSelAlt->Write() ;
-        hjpsiKPiMassSelAltZoom->Write() ;
-        
-        hjpsiKPiMassNoPhi->Write();
-        hjpsiKPiMassBs->Write();
-        hjpsiKPiMassBsTail->Write();
-        
-        hjpsiKPiMass_noKstar->Write();
-        
-        hJpsiPiPi_PiPi->Write();
-        hJpsiKPi_PiPi->Write();
-        hJpsiKK_PiPi->Write();
-        hJpsiKK_KK->Write();
-        hJpsiPiPi_KK->Write();
-        hJpsiKPi_KK->Write();
-        
-        
-        
         hjpsiPiMass->Write();
-        hjpsiPiMass_noKstar->Write();
-        
-        hjpsiPiMass2_case1->Write();
-        hjpsiPiMass2_case2->Write();
-        hjpsiPiMass2_case3->Write();
-        hjpsiPiMass2_case4->Write();
-        hjpsiPiMass2_sb->Write();
-        
-        hPiPi_KK->Write();
-        hPiPi_KPi->Write();
-        hPiPi_KPi_swapped->Write();
-        hKK_KPi->Write();
-        hKK_KPi_swapped->Write();
-        
-        hDalitz_peak_bin1->Write();
-        hDalitz_sideband_bin1->Write();
-        hDalitz_peak_bin2->Write();
-        hDalitz_sideband_bin2->Write();
-        hDalitz_peak_bin3->Write();
-        hDalitz_sideband_bin3->Write();
-        hDalitz_peak_bin4->Write();
-        
-        hDalitz_sideband_bin4->Write();
-        
-        hDalitzProj_m2KPi_peak->Write();
-        hDalitzProj_m2JpsiPi_peak->Write();
-        
-        hDalitzProj_m2KPi_sideband->Write();
-        hDalitzProj_m2JpsiPi_sideband->Write();
-        
-        hjpsiKPiMassSelAltZoomB0pt18->Write();
-        hjpsiKPiMassSelAltZoomTrackpt4p3->Write();
-        hjpsiKPiMassSelAltZoomB0pt18Trackpt4p3->Write();
-        
-        
-        hjpsiKPiMassSelAltZoomTrackpt2p5->Write();
-        hjpsiKPiMassSelAltZoomB0pt18Trackpt2p5->Write();
-        
-        
-        
-        hjpsiKPiMassBaseSelAlt->Write();
-        
-        hChi2byNDF->Write() ;
-        hmuShits->Write() ;
-        hmuPhits->Write() ;
-        hmuDz->Write() ;
-        hmuDxy->Write() ;
-        
-        hB0Vtx_CL           ->	Write();
-        hB0CosAlphaPV       ->	Write();
-        hB0CtauPV_by_E      ->	Write();
-        hMuMuVtx_CL         ->	Write();
-        htrack_fromB0_Pt    ->	Write();
-        hB0Pt               ->    Write();
-        hjpsi_fromB0_Pt     ->	Write();
-        hjpsi_track_deltaR  ->	Write();
-        htrackChi2byNDF	  ->	Write();
-        htrackShits         ->    Write();
-        htrackPhits	  ->    Write();
-        
-        htrack_fromB0_Eta   ->    Write();
-        
-        
-        
+                
         OutFile->Print();
         fOutput->Add(OutFile);
         hMuMuMass->SetDirectory(0); // any hname
