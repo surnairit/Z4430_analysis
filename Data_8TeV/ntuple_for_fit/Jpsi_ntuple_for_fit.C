@@ -98,7 +98,7 @@ void Jpsi_ntuple_for_fit::SlaveBegin(TTree * /*tree*/)
     hMuMuMass               = new TH1F("hMuMuMass","hMuMuMass",1000,0,10);
     hKPiMass_noBs           = new TH1F("hKPiMass_noBs","hKPiMass_noBs",1000,0,5);
     
-    hjpsiPiMass             = new TH1F("hjpsiPiMass","hjpsiPiMass",40,3.8,4.8);
+    hjpsiPiMass             = new TH1F("hjpsiPiMass","hjpsiPiMass",400,3.0,5.0);
     hjpsiKPiMassNoPhi 		= new TH1F("hjpsiKPiMassNoPhi","hjpsiKPiMass No Phi to KK ", 90, 5.10, 5.46);
     
 }
@@ -377,6 +377,8 @@ Bool_t Jpsi_ntuple_for_fit::Process(Long64_t entry)
                     var[2] = TMath::Cos(theta_Jpsi);
                     var[3] = phi;
                     var[4] = kaonCharge;
+                    
+                    _nt->Fill(var);
                 } // B0 peak
                 
             } // no Bs signal
@@ -411,7 +413,7 @@ void Jpsi_ntuple_for_fit::SlaveTerminate()
         
         hKPiMass_noBs->Write();
         hjpsiPiMass->Write();
-                
+        
         OutFile->Print();
         fOutput->Add(OutFile);
         hMuMuMass->SetDirectory(0); // any hname
